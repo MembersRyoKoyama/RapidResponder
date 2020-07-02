@@ -15,11 +15,7 @@
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
-<<<<<<< HEAD
-        "panique/laravel-sass":"dev-master"
-=======
         "panique/laravel-sass": "dev-master"
->>>>>>> 61b60a016a1cf14662b22719873811f2969c6a79
     },
     "require-dev": {
         "facade/ignition": "^2.0",
