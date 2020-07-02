@@ -34,6 +34,4 @@ Route::get('/testmail', function(){
     Mail::to('test@example.com')->send(new TestMail);
     return 'メール送信完了';
 });
-Route::get('/answerList', function(){
-    return view('answers.list');
-});
+Route::get('/questionList', 'QuestionListingController@getQuestions');
