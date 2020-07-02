@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<h1>お問い合わせ一覧</h1>
 <div class="container">
   <table>
     <tbody>
@@ -11,12 +12,12 @@
         <td>製品種別</td>
         <td>日時</td>
         <td>お問い合わせ内容</td>
-        <td>詳細</td>
+        <td></td>
       </tr>
     </tbody>
-    @for($i = 0; $i < 10; $i++)
-      @include('answers.listitem',['obj'=>$i])
-    @endfor
+    @foreach($questions as $question)
+      @include('answers.listitem',['q'=>$question])
+    @endforeach
   </table>
 </div>
 @endsection
