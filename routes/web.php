@@ -29,17 +29,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/testmail', function(){
+Route::get('/testmail', function () {
     Mail::to('test@example.com')->send(new TestMail);
     return 'メール送信完了';
 });
-Route::get('/answerList', function(){
+Route::get('/answerList', function () {
     return view('answers.list');
 });
 
 //お問い合わせ画面
 Route::get('/question', 'QuestionsController@form');
 
-Route::post('/question/check', 'QuestionsController@confirm');
+Route::post('/question/confirm', 'QuestionsController@confirm');
 
-Route::post('/contact/send', 'QuestionsController@process');
+Route::post('/question/send', 'QuestionsController@send');
+
+Route::post('/question', 'QuestionsController@end');
