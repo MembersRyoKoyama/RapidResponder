@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
+
+    public $timestamps = false;
     public function products()
     {
         return $this->belongsTo('App\Product');
@@ -19,5 +21,4 @@ class Question extends Model
         return $this->hasMany('App\Answer', 'questions_id');
     }
     protected $fillable = ['end', 'staffs_id'];
-    public $timestamps = false;
 }
