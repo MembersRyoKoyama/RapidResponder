@@ -53,5 +53,6 @@ Route::post('/password/reset/end', 'Auth\ResetPasswordController@resetend');
 //ログアウト
 Route::get('/stafflogout', 'Auth\LogoutController@logout');
 
+
 //パスワード変更完了
 Route::get('/change', 'Auth\ResetPasswordController@changeend');
