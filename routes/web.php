@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +29,25 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/testmail', function(){
+Route::get('/testmail', function () {
     Mail::to('test@example.com')->send(new TestMail);
     return 'メール送信完了';
 });
-Route::get('/questionList', 'QuestionListingController@getQuestions');
+Route::get('/answerList', function () {
+    return view('answers.list');
+});
+
+//お問い合わせ画面
+Route::get('/question', 'QuestionsController@form');
+
+Route::post('/question/confirm', 'QuestionsController@confirm');
+
+Route::post('/question/send', 'QuestionsController@send');
+
+Route::post('/question', 'QuestionsController@end');
+
+//パスワードリセット
+Route::post('/password/reset/end', 'Auth\ResetPasswordController@resetend');
+
+//ログアウト
+Route::get('/logou', 'Auth\LogoutController@logout');
