@@ -10,5 +10,5 @@
   <td>{{$q->products->name}}</td>
   <td>{{$q->date}}</td>
   <td>{{Str::substr($q->content,0,100)}}</td>
-  <td><a href="#">詳細</a></td>
+  <td><a href="/questionView?id={{$q->id}}">詳細</a></td>
 </tbody>
