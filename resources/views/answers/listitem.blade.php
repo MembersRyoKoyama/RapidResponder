@@ -1,22 +1,16 @@
 <tbody>
-  <td>
-    @switch($q->end)
-      @case(1)
-        <span class="end1">未対応</span>
-        @break
-      @case(2)
-        <span class="end2">対応中</span>
-        @break
-      @case(3)
-        <span class="end3">対応済</span>
-        @break
-    @endswitch
-    
-  </td>
-  <td>{{$q->name}}</td>
-  <td>{{$q->tel}}</td>
-  <td>{{$q->products_id}}</td>
-  <td>{{$q->date}}</td>
-  <td>{{$q->content}}</td>
-  <td>詳細</td>
+  <tr class="d-flex">
+    <td class="col-1" scope="row">
+      @include('answers.endIcon',['end'=>$q->end])<br>
+      @if($q->end!=1)
+      {{$question->users==null?'名無し':$question->users->name}}
+      @endif
+    </td>
+    <td class="col-1">{{$q->name}}</td>
+    <td class="col-2">{{$q->tel}}</td>
+    <td class="col-1">{{$q->products->name}}</td>
+    <td class="col-2">{{$q->date}}</td>
+    <td class="col-4">{{Str::substr($q->content,0,100)}}</td>
+    <td class="col-1"><a href="/questionView?id={{$q->id}}">詳細</a></td>
+  </tr>
 </tbody>
