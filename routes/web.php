@@ -30,8 +30,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/testmail', function(){
+Route::get('/testmail', function () {
     Mail::to('test@example.com')->send(new TestMail);
     return 'メール送信完了';
 });
-Route::get('/questionList', 'QuestionListingController@getQuestions');
+Route::get('/questionList', 'listingQuestions');
+Route::get('/questionView', 'getQuestion');
+Route::get('/questionStateChange', 'questionStateChange');
