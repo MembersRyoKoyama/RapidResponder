@@ -20,10 +20,10 @@
         <input type="text" name="name" value="{{old('name')}}"><br>
 
         <label>メールアドレス</label><br>
-        <input type="text" name="mail"><br>
+        <input type="text" name="mail" value="{{old('mail')}}"><br>
 
         <label>電話番号</label><br>
-        <input type="text" name="tel"><br>
+        <input type="text" name="tel" value="{{old('tel')}}"><br>
 
         <label>製品種別</label><br>
         <select name="products_id">
@@ -34,10 +34,9 @@
         </select><br>
 
         <label>お問い合わせ内容</label><br>
-        <textarea name="content" cols="50" rows="5"></textarea>
+        <textarea name="content" cols="50" rows="5" value="{{old('content')}}">{{old('content')}}</textarea>
 
-
-        <div class="form-group text-center">
+        <div class="form-group ">
             <button type="submit" class="button">
                 　確認する
             </button>

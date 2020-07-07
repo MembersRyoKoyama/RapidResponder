@@ -18,12 +18,13 @@
         <input type="text" name="tel" value="{{$inputs['tel']}}"><br>
 
         <label>製品種別</label><br>
-        <input type="text" name="products_id" value="{{$products}}"><br>
+        <input type="text" name="products_id" value="{{$inputs['products_id']}}" hidden>
+        <input type="text" value="{{$products}}"><br>
 
         <label>お問い合わせ内容</label><br>
         <textarea name="content" cols="50" rows="5">{{$inputs['content']}}</textarea>
 
-        <div class="form-group text-center">
+        <div class="form-group ">
             <button type="submit" class="button">
                 　送信する
             </button>

@@ -42,9 +42,9 @@ class QuestionsController extends Controller
         $question->tel  = $inputs['tel'];
         $question->products_id  = $inputs['products_id'];
         $question->content  = $inputs['content'];
-        $question->date  = $inputs['tel'];
         $question->end  = 1;
-        var_dump($question->products_id);
+        $question->save();
+        //var_dump($question->products_id);
         return view('question/send');
     }
     public function end()

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Mail\TestMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +45,9 @@ Route::post('/question/confirm', 'QuestionsController@confirm');
 Route::post('/question/send', 'QuestionsController@send');
 
 Route::post('/question', 'QuestionsController@end');
+
+//パスワードリセット
+Route::post('/password/reset/end', 'Auth\ResetPasswordController@resetend');
+
+//ログアウト
+Route::get('/logou', 'Auth\LogoutController@logout');
