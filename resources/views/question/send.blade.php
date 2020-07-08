@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 @section('content')
 
-<h1>お問い合わせ内容確認ページ</h1>
+
 <div class="container">
 
     <p>送信が完了しました。<br>

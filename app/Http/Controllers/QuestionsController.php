@@ -28,7 +28,7 @@ class QuestionsController extends Controller
         ]);
 
         //フォームから受け取->ったすべてのinputの値を取得
-        $inputs = $requestall();
+        $inputs = $request->all();
         $products = Product::where('id', $inputs['products_id'])->first();
         //var_dump($inputs, $products->name);
         return view('question/confirm', ['inputs' => $inputs, 'products' => $products->name]);
