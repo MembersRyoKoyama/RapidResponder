@@ -14,7 +14,7 @@
     </form>
 
     <div class="col-sm-offset-3 col-sm-6">
-        <a class="back-button" href="/">　戻る　</a>
+        <a class="back-button" href="javascript:history.back()">　戻る　</a>
     </div>
 </div>
 

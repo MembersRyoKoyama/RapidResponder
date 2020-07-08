@@ -32,4 +32,8 @@ class ResetPasswordController extends Controller
     {
         return view('auth.passwords/end');
     }
+    public function changeend()
+    {
+        return view('auth.passwords/change');
+    }
 }
