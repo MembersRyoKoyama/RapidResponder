@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container" id="questionViewTable">
   <h1 class="text-center">お問い合わせ詳細</h1>
   <table class="table table-sm table-borderless text-center">
     <tbody>
@@ -116,9 +116,24 @@
 @section('footer')
 @if($question->end==2)
 <footer class="footer">
-  <div id="Form" class="container">
-    <input id="dummyForm" class="form-control" type="text" placeholder="対応する">
+
+  <div id="dummyForm" class="container" style="display:{{count($errors) > 0||isset($open)?'none':'block'}};">
+    <input class=" form-control" type="text" placeholder="対応する">
+  </div>
+  <div id="form" class="container" style="display:{{count($errors) > 0||isset($open)?'block':'none'}};">
+    <div id="handle">三</div>
+    <form method="post" action="answerConfirmation">
+      @csrf
+      <textarea name="message" id="message" class="form-control" type="text" placeholder="メッセージ" autofocus>{{
+        old('message')
+      }}</textarea>
+      <textarea name="comment" id="comment" class="form-control" type="text" placeholder="コメント">{{
+        old('comment')
+      }}</textarea>
+      <button class="btn btn-primary" type="submit">送信する</button>
+    </form>
   </div>
 </footer>
+
 @endif
 @endsection
