@@ -24,7 +24,7 @@ class QuestionsController extends Controller
             'mail'  => 'required',
             'tel'  => 'required',
             'products_id' => 'required',
-            'content' => 'required'
+            'content' => 'required | max:2000'
         ]);
 
         //フォームから受け取ったすべてのinputの値を取得
