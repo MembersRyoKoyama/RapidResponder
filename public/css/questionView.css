@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  border-top: 4px solid #3490dc;
+  padding: 5px 0;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.footer #handle {
+  width: 100%;
+  text-align: center;
+  font-size: 4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  cursor: row-resize;
+}
+
