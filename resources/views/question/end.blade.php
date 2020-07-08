@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 @section('content')
 
 <h1>お問い合わせ内容確認ページ</h1>

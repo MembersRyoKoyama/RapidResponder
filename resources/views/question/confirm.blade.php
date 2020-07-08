@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 @section('content')
 
 <h1>お問い合わせ内容確認ページ</h1>
@@ -23,6 +23,8 @@
 
         <label>お問い合わせ内容</label><br>
         <textarea name="content" cols="50" rows="5" readonly>{{$inputs['content']}}</textarea>
+
+
 
         <div class="form-group ">
             <button type="submit" class="btn btn-primary">
