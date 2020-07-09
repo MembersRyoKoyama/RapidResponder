@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\TestMail;
-use Auth;
+//use Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/questionList');
+})->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/questionList', 'listingQuestions');

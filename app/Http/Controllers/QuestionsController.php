@@ -21,9 +21,10 @@ class QuestionsController extends Controller
         //バリデーションを実行（結果に問題があれば処理を中断してエラーを返す）
         $request->validate([
             'name'  => 'required',
-            'mail'  => 'required',
-            'tel'  => 'required',
-            'products_id' => 'required',
+            'mail'  => 'required | email',
+            'tel'  => 'required | numeric |digits_between:9,11',
+            'products_id' => 'required ',
+            //| digits_between:9,11'
             'content' => 'required | max:2000'
         ]);
 
