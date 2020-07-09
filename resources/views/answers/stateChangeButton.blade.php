@@ -10,7 +10,9 @@
 @break
 
 @case(2)
-対応開始
+<a href="/questionStateChange?id={{$question->id}}&to={{$to}}">
+  対応開始
+</a>
 @break
 
 @case(3)
