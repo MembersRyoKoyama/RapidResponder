@@ -5,7 +5,7 @@ $(document).ready(function() {
         $(this).hide();
         $("#form")
             .show()
-            .height(formMinHeight);
+            .height(formMinHeight + 10);
         $("#message").focus();
         $("#questionViewTable").css({ "margin-bottom": formMinHeight });
     });
@@ -25,13 +25,16 @@ $(document).ready(function() {
             let dY = mY - e.pageY;
             mY = e.pageY;
             let h = $("#form").height();
-            if (
-                h + dY > formMinHeight &&
-                h + dY < $(window).height() - headerHeight - 17
-            ) {
-                $("#form").height(h + dY);
+            let t = h + dY;
+            console.log(t, $(window).height() - headerHeight - 17);
+            if (t < formMinHeight) {
+                t = formMinHeight;
             }
-            $("#questionViewTable").css({ "margin-bottom": h + dY });
+            if (t > $(window).height() - headerHeight - 17) {
+                t = $(window).height() - headerHeight - 17;
+            }
+            $("#form").height(t);
+            $("#questionViewTable").css({ "margin-bottom": t });
         }
     });
 });
