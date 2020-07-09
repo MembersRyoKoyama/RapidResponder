@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\TestMail;
-use Auth;
+//use Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

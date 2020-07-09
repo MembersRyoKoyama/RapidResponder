@@ -14,17 +14,17 @@
         @switch($question->end)
         @case(1)
         <td class="col-2">
-          @include('answers.stateChangeButton',['id'=>$question->id,'to'=>2])
+          @include('answers.stateChangeButton',['question'=>$question,'to'=>2])
         </td>
         @break
         @case(2)
         <td class="col-2">
-          @include('answers.stateChangeButton',['id'=>$question->id,'to'=>3])
+          @include('answers.stateChangeButton',['question'=>$question,'to'=>3])
         </td>
         @break
         @case(3)
         <td class="col-2">
-          @include('answers.stateChangeButton',['id'=>$question->id,'to'=>1])
+          @include('answers.stateChangeButton',['question'=>$question,'to'=>1])
         </td>
         @break
         @endswitch
@@ -43,7 +43,7 @@
           {{$question->users==null?'名無し':$question->users->name}}
         </td>
         <td class="col-2">
-          @include('answers.stateChangeButton',['id'=>$question->id,'to'=>1])
+          @include('answers.stateChangeButton',['question'=>$question,'to'=>1])
         </td>
         @break
         @case(3)
@@ -114,7 +114,7 @@
 
 
 @section('footer')
-@if($question->end==2)
+@if($question->end==2&&$question->staffs_id==Auth::id())
 <footer class="footer">
 
   <div id="dummyForm" class="container" style="display:{{count($errors) > 0||isset($open)?'none':'block'}};">
