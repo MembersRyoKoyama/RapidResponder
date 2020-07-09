@@ -1,15 +1,25 @@
-<a href="/questionStateChange?id={{$id}}&to={{$to}}">
-  @switch($to)
-  @case(1)
+@switch($to)
+@case(1)
+@if($question->staffs_id==Auth::id())
+<a href="/questionStateChange?id={{$question->id}}&to={{$to}}">
   未対応に戻す
-  @break
-
-  @case(2)
-  対応開始
-  @break
-
-  @case(3)
-  対応完了
-  @break
-  @endswitch
 </a>
+@else
+<span>未対応に戻す</span>
+@endif
+@break
+
+@case(2)
+対応開始
+@break
+
+@case(3)
+@if($question->staffs_id==Auth::id())
+<a href="/questionStateChange?id={{$question->id}}&to={{$to}}">
+  対応完了
+</a>
+@else
+<span>対応完了</span>
+@endif
+@break
+@endswitch

@@ -98,7 +98,7 @@ $(document).ready(function () {
   var headerHeight = $("#header").height();
   $("#dummyForm").click(function () {
     $(this).hide();
-    $("#form").show().height(formMinHeight);
+    $("#form").show().height(formMinHeight + 10);
     $("#message").focus();
     $("#questionViewTable").css({
       "margin-bottom": formMinHeight
@@ -118,13 +118,20 @@ $(document).ready(function () {
       var dY = mY - e.pageY;
       mY = e.pageY;
       var h = $("#form").height();
+      var t = h + dY;
+      console.log(t, $(window).height() - headerHeight - 17);
 
-      if (h + dY > formMinHeight && h + dY < $(window).height() - headerHeight - 17) {
-        $("#form").height(h + dY);
+      if (t < formMinHeight) {
+        t = formMinHeight;
       }
 
+      if (t > $(window).height() - headerHeight - 17) {
+        t = $(window).height() - headerHeight - 17;
+      }
+
+      $("#form").height(t);
       $("#questionViewTable").css({
-        "margin-bottom": h + dY
+        "margin-bottom": t
       });
     }
   });
