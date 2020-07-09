@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Mail\TestMail;
+use App\Mail\GuestMail;
 //use Auth;
 /*
 |--------------------------------------------------------------------------
