@@ -49843,6 +49843,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/question/index.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/question/index.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/questionView.scss":
 /*!******************************************!*\
   !*** ./resources/sass/questionView.scss ***!
@@ -49855,13 +49866,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/confirmation.scss ./resources/sass/questionView.scss ***!
-  \***********************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/app.scss ./resources/sass/confirmation.scss ./resources/sass/questionView.scss ***!
+  \************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/index.scss */"./resources/sass/question/index.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/confirmation.scss */"./resources/sass/confirmation.scss");
 module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/questionView.scss */"./resources/sass/questionView.scss");
