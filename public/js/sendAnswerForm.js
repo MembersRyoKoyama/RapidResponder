@@ -95,7 +95,7 @@
 
 $(document).ready(function () {
   var formMinHeight = 200;
-  var headerHeight = $("#header").height();
+  var headerHeight = $("#header").heigh;
   $("#dummyForm").click(function () {
     $(this).hide();
     $("#form").show().height(formMinHeight + 10);
