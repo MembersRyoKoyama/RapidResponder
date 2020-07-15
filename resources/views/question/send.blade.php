@@ -12,11 +12,10 @@
         @csrf
 
 
-        <div class="form-group text-center">
-            <button type="submit" class="button btn-primary">
-                Topページに戻る
-            </button>
-        </div>
+
+        <button type="submit" class="returnbutton btn-primary">
+            Topページに戻る
+        </button>
     </form>
 </div>
 
