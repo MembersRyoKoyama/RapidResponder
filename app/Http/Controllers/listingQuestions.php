@@ -9,7 +9,7 @@ class listingQuestions extends Controller
 {
     public function __invoke(Request $request)
     {
-        $itemNum = 10;
+        $itemNum = 8;
         $now = $request->p ?? 1;
         $end = $request->end ?? 1;
         $t = Question::where('end', $end)->get();
@@ -17,7 +17,7 @@ class listingQuestions extends Controller
         $obj = [];
         $pages = [];
         for ($i = 0; $i < $itemNum; $i++) {
-            $k = $i + ($now - 1) * 10;
+            $k = $i + ($now - 1) * $itemNum;
             if ($k > $n - 1) break;
             $obj[] = $t[$k];
         }

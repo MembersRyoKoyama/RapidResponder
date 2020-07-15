@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Mail\messageMail;
 use App\Answer;
+use App\Question;
 use Auth;
 
 class answerStoring extends Controller
@@ -20,6 +23,8 @@ class answerStoring extends Controller
         $answer->comment  = $request->comment;
         $answer->message  = $request->message;
         $answer->save();
+        $mailAddress = Question::where('id', $id)->first()->mail;
+        Mail::to($mailAddress)->send(new messageMail($answer));
         return view('answers/storeComplete');
     }
 }

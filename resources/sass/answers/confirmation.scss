@@ -1,0 +1,22 @@
+@import "../variables";
+
+h1 {
+    color: $gray;
+    font-family: "Yu Gothic", "游ゴシック Medium", YuGothic, "游ゴシック体",
+        "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.buttonWrapper {
+    button {
+        border: none;
+        cursor: pointer;
+        outline: none;
+        max-width: 80%;
+        margin: 5px 10%;
+    }
+}
+
+.confirmationForm:read-only {
+    background-color: white;
+    resize: none;
+    min-height: 200px;
+}

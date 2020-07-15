@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const formMinHeight = 200;
-    const headerHeight = $("#header").heigh;
+    const headerHeight = $("#header").height();
     $("#dummyForm").click(function() {
         $(this).hide();
         $("#form")
@@ -26,12 +26,12 @@ $(document).ready(function() {
             mY = e.pageY;
             let h = $("#form").height();
             let t = h + dY;
-            console.log(t, $(window).height() - headerHeight - 17);
+            console.log(t, $(window).height() - headerHeight);
             if (t < formMinHeight) {
                 t = formMinHeight;
             }
-            if (t > $(window).height() - headerHeight - 17) {
-                t = $(window).height() - headerHeight - 17;
+            if (t > $(window).height() - headerHeight) {
+                t = $(window).height() - headerHeight;
             }
             $("#form").height(t);
             $("#questionViewTable").css({ "margin-bottom": t });

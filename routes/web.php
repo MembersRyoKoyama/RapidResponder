@@ -15,6 +15,11 @@ use App\Mail\GuestMail;
 |
 */
 
+Route::get('mailable', function () {
+    $ans = App\Answer::find(10);
+    return new App\Mail\messageMail($ans);
+});
+
 Route::get('/', function () {
     return view('welcome');
 });

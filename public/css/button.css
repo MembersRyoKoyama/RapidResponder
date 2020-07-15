@@ -1,0 +1,72 @@
+.button {
+  position: relative;
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 3px 10px;
+  background-color: #8c92b9;
+  box-shadow: 0 3px 2px rgba(149, 151, 166, 0.8);
+  color: #fff;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+.button-outline {
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #8c92b9;
+  padding: 1px 10px;
+  color: #8c92b9;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-outline:hover {
+  color: #fff;
+  background: #545871;
+  text-decoration: none;
+}
+
+.button-outline-big {
+  position: relative;
+  border-radius: 17px;
+  font-size: 20px;
+  padding: 5px 20px;
+  border: 1px solid #8c92b9;
+  color: #8c92b9;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-outline-big:hover {
+  color: #fff;
+  background: #545871;
+  text-decoration: none;
+}
+
+.button-outline-active {
+  position: relative;
+  border-radius: 3px;
+  background-color: #8c92b9;
+  border: 1px solid #8c92b9;
+  padding: 1px 10px;
+  color: #8c92b9;
+  color: #fff;
+}
+
+.button-dark {
+  position: relative;
+  border-radius: 17px;
+  font-size: 20px;
+  padding: 5px 20px;
+  background-color: #545871;
+  box-shadow: 0 4px 10px rgba(149, 151, 166, 0.8);
+  color: #fff;
+}
+
+.button-dark:hover {
+  color: #212529;
+  text-decoration: none;
+}
+

@@ -23,5 +23,11 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/staff/reset.scss", "public/css")
     .sass("resources/sass/staff/change.scss", "public/css")
     .sass("resources/sass/app.scss", "public/css")
-    .sass("resources/sass/confirmation.scss", "public/css")
-    .sass("resources/sass/questionView.scss", "public/css");
+    .sass("resources/sass/answers/confirmation.scss", "public/css")
+    .sass("resources/sass/answers/stateChangeButton.scss", "public/css")
+    .sass("resources/sass/answers/pagingButton.scss", "public/css")
+    .sass("resources/sass/answers/button.scss", "public/css")
+    .sass("resources/sass/answers/listItem.scss", "public/css")
+    .sass("resources/sass/answers/endIcon.scss", "public/css")
+    .sass("resources/sass/answers/questionList.scss", "public/css")
+    .sass("resources/sass/answers/questionView.scss", "public/css");
