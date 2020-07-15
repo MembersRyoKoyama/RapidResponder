@@ -18,9 +18,9 @@
       <textarea name="comment" id="comment" class="confirmationForm form-control" type="text" readonly>{{
         $inputs['comment']
     }}</textarea>
-      <div class="buttonWrapper">
-        <a class="button" href="javascript:history.back()">修正する</a>
-        <button class="button" type="submit">送信する</button>
+      <div class="buttonWrapper text-center">
+        <a class="button-outline-big" href="javascript:history.back()">修正する</a>
+        <button class="button-dark" type="submit">送信する</button>
       </div>
     </form>
   </div>

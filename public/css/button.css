@@ -29,6 +29,22 @@
   text-decoration: none;
 }
 
+.button-outline-big {
+  position: relative;
+  border-radius: 17px;
+  font-size: 20px;
+  padding: 5px 20px;
+  border: 1px solid #8c92b9;
+  color: #8c92b9;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button-outline-big:hover {
+  color: #fff;
+  background: #545871;
+  text-decoration: none;
+}
+
 .button-outline-active {
   position: relative;
   border-radius: 3px;
