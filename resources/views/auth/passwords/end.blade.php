@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
 
-<h1>パスワードリセット画面</h1>
-<div class="container">
 
-    <p>送信が完了しました。<br>
-        　　メールをご確認ください
-    </p>
+<div class="container">
+    <div class="title">
+        <p>送信が完了しました。<br>
+            入力したアドレスのメールをご確認ください
+        </p>
+    </div>
 </div>
 
 @endsection

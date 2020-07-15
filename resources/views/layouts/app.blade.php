@@ -26,8 +26,17 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/confirmation.css') }}" rel="stylesheet">
+<<<<<<< HEAD
     @stack('styles')
 
+=======
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/email.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/logout.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/end.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/change.css') }}" rel="stylesheet">
+>>>>>>> 152f5b8a4f938d841f89ef7b590af12b06f1d073
 </head>
 
 <body>

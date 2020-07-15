@@ -1,8 +1,8 @@
 @extends('layouts.guest')
 @section('content')
 
+<div class="container sendquestion">
 
-<div class="container">
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -27,7 +27,7 @@
 
         <label>製品種別</label><br>
         <select name="products_id">
-            <option value="{{null}}">選択してください</option>
+            <option value="{{null}}" class="products">選択してください</option>
             @foreach($products as $product)
             <option value="{{$product->id}}" @if(old('products_id')==$product->id ) selected @endif>{{$product->name}}</option>
             @endforeach
@@ -37,12 +37,12 @@
         <textarea name="content" cols="50" rows="5" value="{{old('content')}}" class="name">{{old('content')}}</textarea>
 
         <div class="form-group ">
-            <button type="submit" class="button">
-                　確認する
+            <button type="submit" class="btn btn-primary">
+                確認する
             </button>
         </div>
 
     </form>
-</div>
 
+</div>
 @endsection

@@ -1,0 +1,18 @@
+.passchange {
+  color: #9597a6;
+  font-size: 18px;
+  position: relative;
+  left: 400px;
+  top: 50px;
+}
+
+.returnpage {
+  position: relative;
+  right: 35px;
+  top: 100px;
+  background-color: #545871;
+  border-radius: 20px;
+  width: 230px;
+  height: 40px;
+}
+
