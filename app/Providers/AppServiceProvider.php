@@ -23,6 +23,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \Blade::directive('pushonce', function ($expression) {
+            $var = '$__env->{"__pushonce_" . md5(__FILE__ . ":" . __LINE__)}';
+
+            return "<?php if(!isset({$var})): {$var} = true; \$__env->startPush({$expression}); ?>";
+        });
+
+        \Blade::directive('endpushonce', function ($expression) {
+            return '<?php $__env->stopPush(); endif; ?>';
+        });
     }
 }

@@ -1,22 +1,25 @@
 @extends('layouts.app')
+@push('styles')
+<link href="{{ asset('css/questionList.css') }}" rel="stylesheet">
+@endpush
 
 @section('content')
-<div class="container">
+<div class="container questionList">
   <h1 class="text-center">お問い合わせ一覧</h1>
   @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end])
   <div class="dropdown">
-    <button type="button" id="dropdown1" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      @include('answers.endIcon',['end'=>$end])
+    <button type="button" id="dropdown1" class="endMenu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <x-end-icon :end="$end" />
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdown1">
       @for($i=1;$i<=3;++$i) @if($i!=$end) <a class="dropdown-item" href="{{url()->current().'?'.http_build_query(['end'=>$i])}}">
-        @include('answers.endIcon',['end'=>$i])
+        <x-end-icon end="{{$i}}" />
         </a>
         @endif
         @endfor
     </div>
   </div>
-  <table class="table table-sm table-bordered">
+  <table class="questionListTable table table-sm table-striped ">
     <thead>
       <tr class="d-flex">
         <th class="col-1">対応状況</th>
@@ -27,9 +30,12 @@
         <th class="col-5">お問い合わせ内容</th>
       </tr>
     </thead>
-    @foreach($questions as $question)
-    @include('answers.listitem',['q'=>$question])
-    @endforeach
+    <tbody>
+      <tr></tr>
+      @foreach($questions as $question)
+      <x-list-item :question="$question" />
+      @endforeach
+    <tbody>
   </table>
   @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end])
 </div>

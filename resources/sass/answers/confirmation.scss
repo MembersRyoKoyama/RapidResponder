@@ -1,5 +1,7 @@
 @import "../variables";
 
-#confirmationForm {
+.confirmationForm:read-only {
     background-color: white;
+    resize: none;
+    min-height: 200px;
 }

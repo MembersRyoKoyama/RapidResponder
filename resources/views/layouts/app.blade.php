@@ -16,21 +16,24 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/sendAnswerForm.js') }}"></script>
+    @stack('scripts')
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/questionView.css') }}" rel="stylesheet">
+
     <link href="{{ asset('css/confirmation.css') }}" rel="stylesheet">
+    @stack('styles')
+
 </head>
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div id="header" class="container">
+        <nav id="header" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
                 <a class="navbar-brand" 　href="{{ url('/questionList') }}">
                     RapidResponder
                 </a>

@@ -7,11 +7,11 @@
     <form method="post" action="/answerStoreComplete">
       @csrf
       メッセージ内容
-      <textarea name="message" id="confirmationForm" class="confirmationForm form-control" type="text" readonly>{{
+      <textarea name="message" id="message" class="confirmationForm form-control" type="text" readonly>{{
         $inputs['message']
     }}</textarea>
       コメント内容
-      <textarea name="comment" id="confirmationForm" class="form-control" type="text" readonly>{{
+      <textarea name="comment" id="comment" class="confirmationForm form-control" type="text" readonly>{{
         $inputs['comment']
     }}</textarea>
       <a class="btn btn-danger" href="javascript:history.back()">修正する</a>

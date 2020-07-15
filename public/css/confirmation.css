@@ -1,4 +1,11 @@
-#confirmationForm {
+.confirmationForm:-moz-read-only {
   background-color: white;
+  resize: none;
+  min-height: 200px;
+}
+.confirmationForm:read-only {
+  background-color: white;
+  resize: none;
+  min-height: 200px;
 }
 

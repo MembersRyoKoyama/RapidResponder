@@ -95,7 +95,7 @@
 
 $(document).ready(function () {
   var formMinHeight = 200;
-  var headerHeight = $("#header").heigh;
+  var headerHeight = $("#header").height();
   $("#dummyForm").click(function () {
     $(this).hide();
     $("#form").show().height(formMinHeight + 10);
@@ -119,14 +119,14 @@ $(document).ready(function () {
       mY = e.pageY;
       var h = $("#form").height();
       var t = h + dY;
-      console.log(t, $(window).height() - headerHeight - 17);
+      console.log(t, $(window).height() - headerHeight);
 
       if (t < formMinHeight) {
         t = formMinHeight;
       }
 
-      if (t > $(window).height() - headerHeight - 17) {
-        t = $(window).height() - headerHeight - 17;
+      if (t > $(window).height() - headerHeight) {
+        t = $(window).height() - headerHeight;
       }
 
       $("#form").height(t);
