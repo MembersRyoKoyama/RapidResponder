@@ -25,6 +25,12 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/questionView.css') }}" rel="stylesheet">
     <link href="{{ asset('css/confirmation.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/email.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/logout.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/end.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/change.css') }}" rel="stylesheet">
 </head>
 
 <body>
