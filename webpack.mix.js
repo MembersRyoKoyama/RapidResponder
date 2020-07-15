@@ -29,6 +29,5 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/answers/button.scss", "public/css")
     .sass("resources/sass/answers/listItem.scss", "public/css")
     .sass("resources/sass/answers/endIcon.scss", "public/css")
-    .sass("resources/sass/answers/confirmation.scss", "public/css")
     .sass("resources/sass/answers/questionList.scss", "public/css")
     .sass("resources/sass/answers/questionView.scss", "public/css");

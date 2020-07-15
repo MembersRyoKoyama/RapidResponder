@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@push('styles')
+<link href="{{ asset('css/confirmation.css') }}" rel="stylesheet">
+<link href="{{ asset('css/button.css') }}" rel="stylesheet">
+@endpush
 
 @section('content')
 <div class="container">
@@ -14,8 +18,10 @@
       <textarea name="comment" id="comment" class="confirmationForm form-control" type="text" readonly>{{
         $inputs['comment']
     }}</textarea>
-      <a class="btn btn-danger" href="javascript:history.back()">修正する</a>
-      <button class="btn btn-primary" type="submit">送信する</button>
+      <div class="buttonWrapper">
+        <a class="button" href="javascript:history.back()">修正する</a>
+        <button class="button" type="submit">送信する</button>
+      </div>
     </form>
   </div>
 </div>
