@@ -3,18 +3,19 @@
 
 <h1></h1>
 <div class="container">
-
-    <p>ログアウトしますか？<br>
-    </p>
-
+    <div class="content">
+        <p>ログアウトします<br>
+            よろしいですか。
+        </p>
+    </div>
     <form method="post" name="form1" action="{{ route('logout') }}">
         @csrf
         <input type="hidden" name="user_name" value="名前">
-        <a href="javascript:form1.submit()">logout</a>
+        <a href="javascript:form1.submit()" class="logout btn btn-primary">はい</a>
     </form>
 
     <div class="col-sm-offset-3 col-sm-6">
-        <a class="back-button" href="javascript:history.back()">　戻る　</a>
+        <a class="cancel back-button btn btn-primary" href="javascript:history.back()">キャンセル</a>
     </div>
 </div>
 

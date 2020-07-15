@@ -49843,10 +49843,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/question/confirm.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/question/confirm.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/question/index.scss":
 /*!********************************************!*\
   !*** ./resources/sass/question/index.scss ***!
   \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/question/send.scss":
+/*!*******************************************!*\
+  !*** ./resources/sass/question/send.scss ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -49865,15 +49887,89 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/staff/change.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/staff/change.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/staff/email.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/staff/email.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/staff/end.scss":
+/*!***************************************!*\
+  !*** ./resources/sass/staff/end.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/staff/login.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/staff/login.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/staff/logout.scss":
+/*!******************************************!*\
+  !*** ./resources/sass/staff/logout.scss ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/staff/reset.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/staff/reset.scss ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/app.scss ./resources/sass/confirmation.scss ./resources/sass/questionView.scss ***!
-  \************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/question/confirm.scss ./resources/sass/question/send.scss ./resources/sass/staff/login.scss ./resources/sass/staff/logout.scss ./resources/sass/staff/email.scss ./resources/sass/staff/end.scss ./resources/sass/staff/reset.scss ./resources/sass/staff/change.scss ./resources/sass/app.scss ./resources/sass/confirmation.scss ./resources/sass/questionView.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/app.js */"./resources/js/app.js");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/index.scss */"./resources/sass/question/index.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/confirm.scss */"./resources/sass/question/confirm.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/send.scss */"./resources/sass/question/send.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/login.scss */"./resources/sass/staff/login.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/logout.scss */"./resources/sass/staff/logout.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/email.scss */"./resources/sass/staff/email.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/end.scss */"./resources/sass/staff/end.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/reset.scss */"./resources/sass/staff/reset.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/change.scss */"./resources/sass/staff/change.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/confirmation.scss */"./resources/sass/confirmation.scss");
 module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/questionView.scss */"./resources/sass/questionView.scss");

@@ -22,6 +22,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/confirm.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/send.css') }}" rel="stylesheet">
 </head>
 
 <body>

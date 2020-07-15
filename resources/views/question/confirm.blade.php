@@ -1,10 +1,11 @@
 @extends('layouts.guest')
 @section('content')
 
-<h1>お問い合わせ内容確認ページ</h1>
-<div class="container">
 
-    <p>こちらの内容でよろしければ送信してください</p>
+<div class="container confirmcontent">
+
+    <p>こちらの内容で送信します</p>
+    <p>問題ないですか</p>
     <form action="{{action('QuestionsController@send')}}" method="post">
         @csrf
         <!--ゲストの問い合わせフォーム -->
@@ -25,14 +26,13 @@
         <textarea name="content" cols="50" rows="5" readonly>{{$inputs['content']}}</textarea>
 
 
-
         <div class="form-group ">
-            <button type="submit" class="btn btn-primary">
-                　送信する
+            <a class="btn btn-primary correction inline-block_test" href="javascript:history.back()">　修正する　</a>
+            <button type="submit" class="btn btn-primary submit inline-block_test">
+                送信する
             </button>
-        </div>
-        <a class="btn btn-primary" href="javascript:history.back()">　修正する　</a>
 
+        </div>
     </form>
 </div>
 
