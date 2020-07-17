@@ -12,7 +12,7 @@ class listingQuestions extends Controller
         $itemNum = 8;
         $now = $request->p ?? 1;
         $end = $request->end ?? 1;
-        $t = Question::where('end', $end)->get();
+        $t = Question::where('end', $end)->orderBy('date')->get();
         $n = count($t);
         $obj = [];
         $pages = [];
