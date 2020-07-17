@@ -20,4 +20,13 @@ class ConfirmTest extends TestCase
 
         $response->assertStatus(200);
     }
+    public function testConfirm()
+    {
+        $QuestionsController = new QuestionsController;
+        $questions = $QuestionsController->id('1'); 
+
+        $this->post('/questions', $questions);
+            ->assertSee('村山 康弘');
+
+    }
 }

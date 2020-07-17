@@ -16,7 +16,7 @@ class IndexTest extends TestCase
     {
         $this->assertTrue(true);
     }
-    public function indexTest()
+    public function testIndex()
     {
     }
 }
