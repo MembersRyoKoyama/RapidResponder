@@ -11,8 +11,6 @@
     <form action="{{action('QuestionsController@end')}}" method="post">
         @csrf
 
-
-
         <button type="submit" class="returnbutton btn-primary">
             Topページに戻る
         </button>
