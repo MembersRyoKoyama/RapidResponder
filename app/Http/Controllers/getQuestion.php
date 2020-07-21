@@ -12,7 +12,7 @@ class getQuestion extends Controller
         $id = $request->id ?? -1;
         $obj = Question::where('id', $id)->first();
         if (!$obj) {
-            return redirect('questionList')->with("errors", ["無効なidです"]);
+            return redirect('questionList', 301)->with("errors", ["無効なidです"]);
         }
         session(['questions_id' => $id]);
         return view('answers/questionView', ['question' => $obj]);
