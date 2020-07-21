@@ -3,13 +3,16 @@
 
 <div class="container sendquestion">
 
-    @if ($errors->any())
+    @if (count($errors) > 0)
+    <!-- Form Error List -->
     <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+        <div>
+            <ul>
+                @foreach ($errors as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     </div>
     @endif
 

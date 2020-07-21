@@ -1,0 +1,57 @@
+<?php
+
+namespace Tests\Feature;
+
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
+use DatabaseMigrations; // テスト用データベースを使用
+use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
+
+class LoginTest extends TestCase
+{
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function testLogin()
+    {
+        $response = $this->get('/login');
+        $response->assertStatus(200);
+        $this->assertGuest();
+    }
+    public function testLoginRedirect()
+    {
+        $response = $this->get('/questionList');
+        $response->assertStatus(302)
+            ->assertRedirect('/login'); // リダイレクト先
+        $this->assertGuest();
+    }
+    public function testDummyLogin()
+    {
+        // 認証されていないことを確認
+        $this->assertGuest();
+        // ダミーログイン
+        $response = $this->dummyLogin();
+        $response->assertStatus(200);
+        // 認証を確認
+        $this->assertAuthenticated();
+    }
+    private function dummyLogin()
+    {
+        $user = new User;
+        //$user = factory(User::class)->create();
+        return $this->actingAs($user)
+            ->withSession(['user_id' => $user->id])
+            ->get('/questionList'); //ログインの必要なページに飛ばす
+    }
+
+    public function testReset()
+    {
+        $response = $this->get('/password/reset');
+
+        $response->assertStatus(200);
+    }
+}

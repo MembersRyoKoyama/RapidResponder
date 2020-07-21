@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Http\Controllers\QuestionsController;
+use App\Question;
 
 class ConfirmTest extends TestCase
 {
@@ -14,19 +15,10 @@ class ConfirmTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
     public function testConfirm()
     {
-        $QuestionsController = new QuestionsController;
-        $questions = $QuestionsController->id('1'); 
-
-        $this->post('/questions', $questions);
-            ->assertSee('村山 康弘');
-
+        $response = $this->get('/question/confirm');
+        $response->assertStatus(302)
+            ->assertRedirect('/question');
     }
 }
