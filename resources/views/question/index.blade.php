@@ -3,13 +3,16 @@
 
 <div class="container sendquestion">
 
-    @if ($errors->any())
+    @if (count($errors) > 0)
+    <!-- Form Error List -->
     <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+        <div>
+            <ul>
+                @foreach ($errors as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
     </div>
     @endif
 
@@ -37,7 +40,7 @@
         <textarea name="content" cols="50" rows="5" value="{{old('content')}}" class="name">{{old('content')}}</textarea>
 
         <div class="form-group ">
-            <button type="submit" class="btn btn-primary">
+            <button name="confirm-btn" type="submit" class="btn btn-primary">
                 確認する
             </button>
         </div>
