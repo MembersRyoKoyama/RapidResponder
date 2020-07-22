@@ -14,3 +14,4 @@ composer.lock
 composer.json
 package-lock.json
 package.json
+.env.dusk.local

@@ -93,7 +93,7 @@
 <footer class="footer">
 
   <div id="dummyForm" class="container" style="display:{{count($errors) > 0||isset($open)?'none':'block'}};">
-    <input class=" form-control" type="text" placeholder="対応する">
+    <input class=" form-control" type="text" placeholder="対応する" dusk="dummyFormButton">
   </div>
   <div id="form" class="container" style="display:{{count($errors) > 0||isset($open)?'block':'none'}};">
     <div id="handle">三</div>
@@ -106,7 +106,7 @@
         old('comment')
       }}</textarea>
       <div class="buttonwrapper">
-        <button class="button-dark" type="submit">送信する</button>
+        <button class="button-dark" type="submit" dusk="submitButton">送信する</button>
       </div>
     </form>
   </div>
