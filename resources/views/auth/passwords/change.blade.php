@@ -15,7 +15,6 @@
 
             　<a class="returnpage btn btn-primary" href="/login">{{ __('ログイン画面に戻る') }}</a>
             <?php /*<a class="nav-link" href="{{ route('login')}}">{{ __('ログインページに戻る') }}</a>*/ ?>
-
         </div>
     </form>
 </div>

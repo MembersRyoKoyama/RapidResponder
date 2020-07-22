@@ -11,12 +11,6 @@
     "/css/change.css": "/css/change.css",
     "/css/app.css": "/css/app.css",
     "/css/confirmation.css": "/css/confirmation.css",
-    "/css/stateChangeButton.css": "/css/stateChangeButton.css",
-    "/css/pagingButton.css": "/css/pagingButton.css",
-    "/css/button.css": "/css/button.css",
-    "/css/listItem.css": "/css/listItem.css",
-    "/css/endIcon.css": "/css/endIcon.css",
-    "/css/questionList.css": "/css/questionList.css",
     "/css/questionView.css": "/css/questionView.css",
     "/js/sendAnswerForm.js": "/js/sendAnswerForm.js"
 }

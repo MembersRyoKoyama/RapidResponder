@@ -28,7 +28,7 @@
 
         <div class="form-group ">
             <a class="btn btn-primary correction inline-block_test" href="javascript:history.back()">　修正する　</a>
-            <button type="submit" class="btn btn-primary submit inline-block_test">
+            <button type="submit" class="btn btn-primary submit inline-block_test" name="submit">
                 送信する
             </button>
 
