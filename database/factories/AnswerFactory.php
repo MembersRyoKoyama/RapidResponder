@@ -5,11 +5,11 @@
 use App\Model;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(App\Answer::class, function (Faker $faker) {
     $questions = App\Question::pluck('id')->all();
-    $products = App\Product::pluck('id')->all();
+    $max = count($questions) - 1;
     return [
-        'questions_id' => $questions[random_int(0, count($questions) - 1)],
+        'questions_id' => $questions[$max == 0 ? 0 : random_int(0, $max)],
         'staffs_id' => $faker->unique()->safeEmail,
         'comment' => $faker->text(2000),
         'message' => $faker->text(4000),

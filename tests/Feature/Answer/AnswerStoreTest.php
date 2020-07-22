@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Answer;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -12,9 +12,8 @@ use App\Question;
 use App\User;
 use App\Product;
 use App\Answer;
-use Faker\Generator as Faker;
 
-class answerFormTest extends TestCase
+class AnswerStoreTest extends TestCase
 {
     protected function setUp(): void
     {
@@ -29,11 +28,11 @@ class answerFormTest extends TestCase
         parent::tearDown();
     }
     /**
-     * @group formTest
-     * フォーム入力後の表示テスト
+     * @group answerTest
+     * answer投稿テスト（可能ユーザー）
      * @test
      */
-    public function answerFormAvailableContents()
+    public function answerAvailableUser()
     {
         $user1 = factory(User::class)->create();
         //$user2 = factory(User::class)->create();
@@ -50,46 +49,19 @@ class answerFormTest extends TestCase
         ];
         $this->actingAs($user1)
             ->withSession(['questions_id' => $question->id])
-            ->post("answerConfirmation", $answerContents)
-            ->assertOk()
-            ->assertSeeInOrder($answerContents);
+            ->post("answerStoreComplete", $answerContents)
+            ->assertOk();
+        $this->assertDatabaseHas('answers', $answerContents);
     }
     /**
-     * @group formTest
-     * フォームに想定外の値を投げるテスト
+     * @group answerTest
+     * answer投稿テスト（不可能ユーザー）
      * @test
      */
-    public function answerFormUnavailableContents()
+    public function answerUnavailableUser()
     {
-
         $user1 = factory(User::class)->create();
         //$user2 = factory(User::class)->create();
-
-        $question = factory(Question::class)->create([
-            'staffs_id' => $user1->id,
-            'end' => 2,
-        ]);
-
-        $answer = factory(Answer::class)->make();
-        $answerContents = [
-            'message' => $answer->message . $answer->message,
-            'comment' => $answer->comment,
-        ];
-        $this->actingAs($user1)
-            ->withSession(['questions_id' => $question->id])
-            ->post("answerConfirmation", $answerContents)
-            ->assertRedirect();
-    }
-    /**
-     * @group formTest
-     * ダメなユーザーがフォームに想定の値を投げるテスト
-     * @test
-     */
-    public function answerFormUnavailableUser()
-    {
-
-        $user1 = factory(User::class)->create();
-        $user2 = factory(User::class)->create();
 
         $question = factory(Question::class)->create([
             'staffs_id' => $user1->id,
@@ -101,9 +73,10 @@ class answerFormTest extends TestCase
             'message' => $answer->message,
             'comment' => $answer->comment,
         ];
-        $this->actingAs($user2)
+        $this->actingAs($user1)
             ->withSession(['questions_id' => $question->id])
-            ->post("answerConfirmation", $answerContents)
-            ->assertRedirect();
+            ->post("answerStoreComplete", $answerContents)
+            ->assertOk();
+        $this->assertDatabaseHas('answers', $answerContents);
     }
 }
