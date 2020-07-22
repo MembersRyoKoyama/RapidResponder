@@ -19,7 +19,7 @@ class QuestionTableSeeder extends Seeder
             for ($j = 0; $j < 10; $j++) {
                 $staffs_id = $i != 1 ? $staffs[$j % count($staffs)] : null;
                 factory(App\Question::class)->create([
-                    'products_id' => $products[random_int(1, count($products) - 1)],
+                    'products_id' => $products[random_int(0, count($products) - 1)],
                     'end' => $i,
                     'staffs_id' => $staffs_id,
                 ]);

@@ -8,6 +8,7 @@ use Tests\TestCase;
 use DatabaseMigrations; // テスト用データベースを使用
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Artisan;
 
 class LogoutTest extends TestCase
 {
@@ -16,6 +17,22 @@ class LogoutTest extends TestCase
      *
      * @return void
      */
+    use RefreshDatabase;
+    protected function setUp(): void
+    {
+        parent::setUp();
+        //parent::tearDown();
+        $this->seed([
+            'UserTableSeeder'
+        ]);
+    }
+
+    public function tearDown(): void
+    {
+        Artisan::call('migrate:refresh');
+        parent::tearDown();
+    }
+
     public function testLogout()
     {
         // ダミーログイン

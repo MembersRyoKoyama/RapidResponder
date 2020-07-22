@@ -40,7 +40,7 @@
         <textarea name="content" cols="50" rows="5" value="{{old('content')}}" class="name">{{old('content')}}</textarea>
 
         <div class="form-group ">
-            <button type="submit" class="btn btn-primary">
+            <button name="confirm-btn" type="submit" class="btn btn-primary">
                 確認する
             </button>
         </div>
