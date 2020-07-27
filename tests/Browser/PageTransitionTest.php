@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class transitionTest extends DuskTestCase
+class PageTransitionTest extends DuskTestCase
 {
     /**
      * @group transitionTest

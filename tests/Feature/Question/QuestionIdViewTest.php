@@ -67,7 +67,7 @@ class QuestionIdViewTest extends TestCase
      */
     public function idBorder()
     {
-        $id1 = 19;
+        $id1 = 20;
         $id2 = 21;
         $user = factory(User::class)->create();
         factory(Question::class, 20)->create();
