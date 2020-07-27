@@ -17,6 +17,7 @@ class ResetMailTest extends DuskTestCase
      */
     public function testResetMail()
     {
+        $user1 = factory(User::class)->create();
         $this->browse(function ($browser) {
             $browser->visit('/login')
                 ->assertPathIs('/login');
