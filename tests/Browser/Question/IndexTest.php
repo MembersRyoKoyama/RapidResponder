@@ -8,13 +8,29 @@ use Tests\DuskTestCase;
 use App\Question;
 use App\Product;
 use Laravel\Dusk\Chrome;
+use Illuminate\Support\Facades\Artisan;
 
 class IndexTest extends DuskTestCase
 {
+    use DatabaseMigrations;
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->seed([
+            'ProductTableSeeder',
+            'UserTableSeeder'
+        ]);
+    }
+    public function tearDown(): void
+    {
+        Artisan::call('migrate:refresh');
+        parent::tearDown();
+    }
     /**
      * A Dusk test example.
      *
      * @return void
+     * @group index
      */
     public function testBrowseIndex()
     {
