@@ -20,6 +20,7 @@ class ResetMailTest extends DuskTestCase
         $this->browse(function ($browser) {
             $browser->visit('/login')
                 ->assertPathIs('/login');
+            //$browser->clickLink('password-forget');
             //->ensurejQueryIsAvailable();
             /*->assertSeeLink()
                 ->clickLink()*/
