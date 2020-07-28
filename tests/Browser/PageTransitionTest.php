@@ -5,6 +5,11 @@ namespace Tests\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
+use Tests\TestCase;
+use App\User;
+use App\Product;
+use App\Question;
+use Illuminate\Support\Facades\Artisan;
 
 class PageTransitionTest extends DuskTestCase
 {
@@ -47,11 +52,19 @@ class PageTransitionTest extends DuskTestCase
      * A Dusk test example.
      * @test
      */
-    public function Example()
+    public function testPageTransition()
     {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/')
-                ->assertSee('Lalaa');
+        $user = factory(User::class)->create([]);
+
+        $this->browse(function ($browser) use ($user) {
+            $browser->loginAs($user)
+                ->visit('/questionList')
+                ->assertPathIs('/questionList')
+                ->clickLink('詳細')
+                //->assertPathIs('/questionView?id=' . "{{$this->questions[1][3]->id}}");
+                //<a href="/questionView?id={{$question->id}}">
+                ->clickLink('対応開始')
+                ->clickLink('未対応に戻す');
         });
     }
 }

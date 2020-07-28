@@ -49,10 +49,8 @@ class QuestionSendTest extends DuskTestCase
                 ->assertPathIs('/question/confirm')
                 ->press('submit')
                 ->assertPathIs('/question/send')
-                ->screenshot('filename_8')
                 ->press('submit')
                 ->assertPathIs('/question');
-            $browser->screenshot('filename_7');
         });
     }
 }
