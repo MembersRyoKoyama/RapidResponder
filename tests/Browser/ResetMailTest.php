@@ -6,9 +6,28 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Chrome;
+use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ResetMailTest extends DuskTestCase
 {
+    use RefreshDatabase;
+    protected function setUp(): void
+    {
+        parent::setUp();
+        //parent::tearDown();
+        $this->seed([
+            'UserTableSeeder'
+        ]);
+    }
+
+    public function tearDown(): void
+    {
+        Artisan::call('migrate:refresh');
+        parent::tearDown();
+    }
     /**
      * A Dusk test example.
      *
@@ -17,16 +36,23 @@ class ResetMailTest extends DuskTestCase
      */
     public function testResetMail()
     {
-        $user1 = factory(User::class)->create();
-        $this->browse(function ($browser) {
-            $browser->visit('/login')
-                ->assertPathIs('/login');
-            //->ensurejQueryIsAvailable();
-            /*->assertSeeLink()
-                ->clickLink()*/
-            //->assertDontSeeLink('/')
-            /*->press("password-forget")
-                ->assertPathIs('/password/reset');*/
+        $user = factory(User::class)->create();
+        $this->browse(function ($browser) use ($user) {
+            /*$browser->visit('/password/reset')
+                ->assertPathIs('/password/reset')
+                ->type('@email', 'staff1@gmail.com')
+                ->press('#email-btn');
+            eval(\Psy\sh());*/
+            $browser->visit('/questionList')
+                ->assertPathIs('/login')
+                ->clickLink('パスワードを忘れた方はこちら')
+                ->assertPathIs('/password/reset')
+                ->type('email', $user->email)
+                ->press('#email-btn');
+            $browser->screenshot('filename_3');
+            //eval(\Psy\sh());
+            //->assertPathIs('/password/email');
+            //$browser->clickLink('password-forget');
         });
     }
 }

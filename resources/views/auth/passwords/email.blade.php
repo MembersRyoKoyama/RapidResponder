@@ -26,7 +26,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label><br>
                             <?php /*col-md-4 col-form-label text-md-right*/ ?>
                             <div class="col-md-6">
-                                <input id="email" type="email" class="mail form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input dusk="email" id="email" type="email" class="email mail form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="submit btn btn-primary">
+                                <button id="email-btn" dusk="email-btn" type="submit" class="email-btn submit btn btn-primary" name="email-btn">
                                     {{ __('送信') }}
                                 </button>
                             </div>
