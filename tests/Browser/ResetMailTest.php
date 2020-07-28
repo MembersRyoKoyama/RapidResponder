@@ -50,7 +50,7 @@ class ResetMailTest extends DuskTestCase
                 ->type('email', $user->email)
                 ->press('#email-btn');
             $browser->screenshot('filename_3');
-            //eval(\Psy\sh());
+            eval(\Psy\sh());
             //->assertPathIs('/password/email');
             //$browser->clickLink('password-forget');
         });

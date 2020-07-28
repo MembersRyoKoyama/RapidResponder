@@ -42,41 +42,45 @@ class AnswerStoreTest extends TestCase
             'end' => 2,
         ]);
 
-        $answer = factory(Answer::class)->make();
-        $answerContents = [
-            'message' => $answer->message,
-            'comment' => $answer->comment,
-        ];
+        $answer = factory(Answer::class)->make([
+            "comment" => "comment",
+            "message" => "message",
+        ])->toArray();
+        unset($answer['date']);
+        // $answerContents = [
+        //     'message' => $answer->message,
+        //     'comment' => $answer->comment,
+        // ];
         $this->actingAs($user1)
             ->withSession(['questions_id' => $question->id])
-            ->post("answerStoreComplete", $answerContents)
+            ->post("answerStoreComplete", $answer)
             ->assertOk();
-        $this->assertDatabaseHas('answers', $answerContents);
+        $this->assertDatabaseHas('answers', $answer);
     }
     /**
      * @group answerTest
      * answer投稿テスト（不可能ユーザー）
-     * @test
+     * @
      */
     public function answerUnavailableUser()
     {
         $user1 = factory(User::class)->create();
-        //$user2 = factory(User::class)->create();
+        $user2 = factory(User::class)->create();
 
         $question = factory(Question::class)->create([
             'staffs_id' => $user1->id,
             'end' => 2,
         ]);
 
-        $answer = factory(Answer::class)->make();
+        $answer = factory(Answer::class)->make()->toArray();
         $answerContents = [
             'message' => $answer->message,
             'comment' => $answer->comment,
         ];
-        $this->actingAs($user1)
+        $this->actingAs($user2)
             ->withSession(['questions_id' => $question->id])
-            ->post("answerStoreComplete", $answerContents)
+            ->post("answerStoreComplete", $answer)
             ->assertOk();
-        $this->assertDatabaseHas('answers', $answerContents);
+        $this->assertDatabaseHas('answers', $answer);
     }
 }
