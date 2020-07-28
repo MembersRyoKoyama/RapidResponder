@@ -14,8 +14,9 @@ use App\Product;
 use App\Answer;
 use Faker\Generator as Faker;
 
-class answerFormTest extends TestCase
+class AnswerFormTest extends TestCase
 {
+    use RefreshDatabase;
     protected function setUp(): void
     {
         parent::setUp();

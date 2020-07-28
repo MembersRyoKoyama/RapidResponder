@@ -47,6 +47,8 @@ class IndexTest extends DuskTestCase
                 ->type('content', $question->content)
                 ->press('confirm-btn')
                 ->assertPathIs('/question/confirm');
+
+            $browser->screenshot('filename_1');
         });
     }
     public function testNonBrowseIndex()

@@ -38,11 +38,19 @@ class ResetMailTest extends DuskTestCase
     {
         $user = factory(User::class)->create();
         $this->browse(function ($browser) use ($user) {
-            $browser->visit('/password/reset')
+            /*$browser->visit('/password/reset')
                 ->assertPathIs('/password/reset')
                 ->type('@email', 'staff1@gmail.com')
                 ->press('#email-btn');
-            eval(\Psy\sh());
+            eval(\Psy\sh());*/
+            $browser->visit('/questionList')
+                ->assertPathIs('/login')
+                ->clickLink('パスワードを忘れた方はこちら')
+                ->assertPathIs('/password/reset')
+                ->type('email', $user->email)
+                ->press('#email-btn');
+            $browser->screenshot('filename_3');
+            //eval(\Psy\sh());
             //->assertPathIs('/password/email');
             //$browser->clickLink('password-forget');
         });

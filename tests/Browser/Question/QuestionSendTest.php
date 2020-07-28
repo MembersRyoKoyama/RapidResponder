@@ -34,7 +34,7 @@ class QuestionSendTest extends DuskTestCase
      */
     public function testSendQuestion()
     {
-        $question = factory(Question::class)->create([
+        $question = factory(Question::class)->make([
             'mail' => 'taylor@laravel.com',
         ]);
         //想定された値のページ遷移 送信完了画面まで
@@ -49,8 +49,10 @@ class QuestionSendTest extends DuskTestCase
                 ->assertPathIs('/question/confirm')
                 ->press('submit')
                 ->assertPathIs('/question/send')
+                ->screenshot('filename_8')
                 ->press('submit')
                 ->assertPathIs('/question');
+            $browser->screenshot('filename_7');
         });
     }
 }
