@@ -47,6 +47,7 @@ class QuestionSendTest extends DuskTestCase
                 ->type('content', $question->content)
                 //eval(\Psy\sh());
                 ->press('confirm-btn')
+                //eval(\Psy\sh());
                 ->assertPathIs('/question/confirm')
                 //->press('submit')
                 ->click('.submit')

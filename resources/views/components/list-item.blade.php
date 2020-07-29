@@ -20,7 +20,7 @@
     <td class="col-2"><span>{{$question->date}}</span></td>
     <td class="col-4"><span>{{Str::substr($question->content,0,100)}}</span></td>
     <td class="col-1">
-        <span>
+        <span class="detail-button">
             <a href="/questionView?id={{$question->id}}">
                 <x-button text="詳細" />
             </a>
