@@ -49821,6 +49821,94 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/answers/button.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/answers/button.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/confirmation.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/answers/confirmation.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/endIcon.scss":
+/*!*********************************************!*\
+  !*** ./resources/sass/answers/endIcon.scss ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/listItem.scss":
+/*!**********************************************!*\
+  !*** ./resources/sass/answers/listItem.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/pagingButton.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/answers/pagingButton.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/questionList.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/answers/questionList.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/questionView.scss":
+/*!**************************************************!*\
+  !*** ./resources/sass/answers/questionView.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/answers/stateChangeButton.scss":
+/*!*******************************************************!*\
+  !*** ./resources/sass/answers/stateChangeButton.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -49829,17 +49917,6 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/confirmation.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/confirmation.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/var/www/Rapid-Responder/resources/sass/confirmation.scss'\n    at /var/www/Rapid-Responder/node_modules/webpack/lib/NormalModule.js:316:20\n    at /var/www/Rapid-Responder/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/Rapid-Responder/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /var/www/Rapid-Responder/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ }),
 
@@ -49873,17 +49950,6 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/questionView.scss":
-/*!******************************************!*\
-  !*** ./resources/sass/questionView.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/var/www/Rapid-Responder/resources/sass/questionView.scss'\n    at /var/www/Rapid-Responder/node_modules/webpack/lib/NormalModule.js:316:20\n    at /var/www/Rapid-Responder/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/Rapid-Responder/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /var/www/Rapid-Responder/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
 
 /***/ }),
 
@@ -49954,9 +50020,9 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/question/confirm.scss ./resources/sass/question/send.scss ./resources/sass/staff/login.scss ./resources/sass/staff/logout.scss ./resources/sass/staff/email.scss ./resources/sass/staff/end.scss ./resources/sass/staff/reset.scss ./resources/sass/staff/change.scss ./resources/sass/app.scss ./resources/sass/confirmation.scss ./resources/sass/questionView.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/question/confirm.scss ./resources/sass/question/send.scss ./resources/sass/staff/login.scss ./resources/sass/staff/logout.scss ./resources/sass/staff/email.scss ./resources/sass/staff/end.scss ./resources/sass/staff/reset.scss ./resources/sass/staff/change.scss ./resources/sass/app.scss ./resources/sass/answers/confirmation.scss ./resources/sass/answers/stateChangeButton.scss ./resources/sass/answers/pagingButton.scss ./resources/sass/answers/button.scss ./resources/sass/answers/listItem.scss ./resources/sass/answers/endIcon.scss ./resources/sass/answers/questionList.scss ./resources/sass/answers/questionView.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49971,8 +50037,14 @@ __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/end.scss *
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/reset.scss */"./resources/sass/staff/reset.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/change.scss */"./resources/sass/staff/change.scss");
 __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/confirmation.scss */"./resources/sass/confirmation.scss");
-module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/questionView.scss */"./resources/sass/questionView.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/confirmation.scss */"./resources/sass/answers/confirmation.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/stateChangeButton.scss */"./resources/sass/answers/stateChangeButton.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/pagingButton.scss */"./resources/sass/answers/pagingButton.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/button.scss */"./resources/sass/answers/button.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/listItem.scss */"./resources/sass/answers/listItem.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/endIcon.scss */"./resources/sass/answers/endIcon.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/questionList.scss */"./resources/sass/answers/questionList.scss");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/questionView.scss */"./resources/sass/answers/questionView.scss");
 
 
 /***/ })
