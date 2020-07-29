@@ -8,13 +8,9 @@
             ご利用いただきありがとうございます。
         </p>
     </div>
-    <form action="{{action('QuestionsController@end')}}" method="post">
-        @csrf
 
-        <button type="submit" class="returnbutton btn-primary" name="submit">
-            Topページに戻る
-        </button>
-    </form>
+    <a class="returnbutton btn-primary" href="{{action('QuestionsController@end')}}">Topページに戻る</a>
+
 </div>
 
 @endsection

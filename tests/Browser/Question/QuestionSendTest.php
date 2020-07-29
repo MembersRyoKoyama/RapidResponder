@@ -46,13 +46,12 @@ class QuestionSendTest extends DuskTestCase
                 ->select('products_id', $question->products_id)
                 ->type('content', $question->content)
                 ->press('confirm-btn')
+                //eval(\Psy\sh());
                 ->assertPathIs('/question/confirm')
-                ->press('submit')
+                ->click('.submit')
                 ->assertPathIs('/question/send')
-                ->screenshot('filename_8')
-                ->press('submit')
+                ->clickLink('aaa')
                 ->assertPathIs('/question');
-            $browser->screenshot('filename_7');
         });
     }
 }
