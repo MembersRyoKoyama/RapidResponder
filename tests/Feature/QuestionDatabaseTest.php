@@ -49,7 +49,6 @@ class QuestionDatabaseTest extends TestCase
         ];
         $this->post("/question/send", $questionContents)
             ->assertOk();
-        //eval(\Psy\sh());
         $this->assertDatabaseHas('questions', $questionContents);
     }
 }
