@@ -15,7 +15,10 @@ class answerStoring extends Controller
     {
         $id = $request->session()->pull('questions_id', -1);
         if ($id < 0) {
-            return redirect('questionList')->with("errors", ["最初からやり直してください"]);
+            return redirect('questionList')->with("errors", ["セッションが切れました"]);
+        }
+        if (Question::where('id', $id)->first()->staffs_id != Auth::id()) {
+            return back()->with("errors", ["権限がありません"]);
         }
         $answer = new Answer;
         $answer->questions_id = $id;

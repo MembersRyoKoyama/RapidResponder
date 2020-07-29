@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Answer;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Dusk\Browser;
@@ -15,6 +15,7 @@ use App\Answer;
 
 class AnswerStoreTest extends TestCase
 {
+    use DatabaseMigrations;
     protected function setUp(): void
     {
         parent::setUp();
@@ -60,7 +61,7 @@ class AnswerStoreTest extends TestCase
     /**
      * @group answerTest
      * answer投稿テスト（不可能ユーザー）
-     * @
+     * @test
      */
     public function answerUnavailableUser()
     {
@@ -73,14 +74,10 @@ class AnswerStoreTest extends TestCase
         ]);
 
         $answer = factory(Answer::class)->make()->toArray();
-        $answerContents = [
-            'message' => $answer->message,
-            'comment' => $answer->comment,
-        ];
         $this->actingAs($user2)
             ->withSession(['questions_id' => $question->id])
             ->post("answerStoreComplete", $answer)
-            ->assertOk();
-        $this->assertDatabaseHas('answers', $answer);
+            ->assertRedirect();
+        $this->assertDatabaseMissing('answers', $answer);
     }
 }
