@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+h1 {
+  color: #9597a6;
+  font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF   Medium", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30E1\30A4\30EA\30AA", sans-serif;
+}
+
+#questionViewTable {
+  background: #fff;
+  margin-top: -1.5rem;
+  padding: 1.5rem 1.5rem;
+}
+
+.stateChangeButton .button-dark {
+  margin-left: 10px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: rgba(218, 219, 230, 0.8);
+}
+
+.footer #form {
+  display: block;
+  width: 100%;
+}
+
+.footer #form #handle {
+  width: 100%;
+  text-align: center;
+  font-size: 4;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  cursor: row-resize;
+}
+
+.footer #form #message {
+  width: 100%;
+  min-height: 100px;
+}
+
+.footer #form #comment {
+  display: inline;
+  width: 75%;
+  min-height: 70px;
+}
+
+.footer #form .buttonwrapper {
+  width: 25%;
+  height: 70px;
+  float: right;
+  display: block;
+}
+
+.footer #form .buttonwrapper button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  max-width: 80%;
+  margin: 5% 24%;
+}
+

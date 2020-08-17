@@ -1,0 +1,60 @@
+.title {
+  font-size: 25px;
+  color: #9597a6;
+  position: relative;
+  right: 40px;
+}
+
+.card-body {
+  position: relative;
+  right: 140px;
+}
+
+.login {
+  background-color: #545871;
+  border-radius: 20px;
+  width: 150px;
+  position: relative;
+  left: 290px;
+  height: 43px;
+}
+
+.mail {
+  position: relative;
+  left: 0px;
+  width: 400px;
+}
+
+.pass {
+  position: relative;
+  right: 30px;
+}
+
+.passtext {
+  position: relative;
+  left: 100px;
+  width: 400px;
+}
+
+.forget {
+  position: relative;
+  right: 220px;
+  bottom: 40px;
+}
+
+.form-check {
+  position: relative;
+  top: 50px;
+  right: 70px;
+  color: #9597a6;
+}
+
+.col-md-4 {
+  color: #9597a6;
+}
+
+.col-md-8 {
+  position: relative;
+  right: 70px;
+}
+

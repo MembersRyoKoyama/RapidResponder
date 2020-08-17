@@ -1,0 +1,71 @@
+@import "../variables";
+
+.button {
+    position: relative;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 3px 10px;
+    background-color: $button-detail;
+    box-shadow: 0 3px 2px rgba($gray, 0.8);
+    color: $white;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover {
+        color: $dark;
+        text-decoration: none;
+    }
+}
+
+.button-outline {
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid $button-detail;
+    padding: 1px 10px;
+    color: $button-detail;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover {
+        color: $white;
+        background: $button-dark;
+        text-decoration: none;
+    }
+}
+.button-outline-big {
+    position: relative;
+    border-radius: 17px;
+    font-size: 20px;
+    padding: 5px 20px;
+    border: 1px solid $button-detail;
+    color: $button-detail;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:hover {
+        color: $white;
+        background: $button-dark;
+        text-decoration: none;
+    }
+}
+
+.button-outline-active {
+    position: relative;
+    border-radius: 3px;
+    background-color: $button-detail;
+    border: 1px solid $button-detail;
+    padding: 1px 10px;
+    color: $button-detail;
+    color: $white;
+}
+
+.button-dark {
+    position: relative;
+    border-radius: 17px;
+    font-size: 20px;
+    padding: 5px 20px;
+    background-color: $button-dark;
+    box-shadow: 0 4px 10px rgba($gray, 0.8);
+    color: $white;
+    &:hover {
+        color: $dark;
+        text-decoration: none;
+    }
+}

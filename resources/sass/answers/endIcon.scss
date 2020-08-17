@@ -1,0 +1,18 @@
+@import "../variables";
+@import "../mixin";
+
+.endIcon {
+    border-radius: 3px;
+    padding: 2px 4px;
+    color: $white;
+}
+
+.end1 {
+    background: $end1;
+}
+.end2 {
+    background: $end2;
+}
+.end3 {
+    background: $end3;
+}

@@ -1,0 +1,45 @@
+.mail {
+  position: relative;
+  right: 200px;
+}
+
+.mailbox {
+  position: relative;
+  left: 200px;
+  width: 400px;
+}
+
+.passa {
+  position: relative;
+  left: 200px;
+}
+
+.passbox {
+  position: relative;
+  left: 200px;
+  width: 400px;
+}
+
+.confirm {
+  position: relative;
+  right: 150px;
+  width: 600px;
+  color: #9597a6;
+}
+
+.confirmbox {
+  position: relative;
+  left: 200px;
+  width: 400px;
+}
+
+.change {
+  background-color: #545871;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  position: relative;
+  left: 110px;
+  top: 25px;
+}
+

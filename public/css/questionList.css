@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+.questionList h1 {
+  color: #9597a6;
+  font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF   Medium", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30E1\30A4\30EA\30AA", sans-serif;
+}
+
+.questionList a:hover {
+  text-decoration: none;
+}
+
+.questionList .questionListTable thead th {
+  background-color: #dadbe6;
+  border: 0;
+  border-left: #9597a6 1px solid;
+  text-align: center;
+}
+
+.questionList .questionListTable thead th:first-child {
+  border-left: none;
+}
+
+.questionList .questionListTable thead th:last-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.questionList .questionListTable tbody td {
+  display: flex;
+  justify-content: center;
+  /*左右中央揃え*/
+  align-items: center;
+  /*上下中央揃え*/
+  border: 0;
+  border-left: #9597a6 1px solid;
+}
+
+.questionList .questionListTable tbody td:first-child,
+.questionList .questionListTable tbody td:last-child {
+  border-left: none;
+}
+
+.questionList .questionListTable tbody td:first-child {
+  flex-direction: column;
+}
+
+.questionList .questionListTable tbody td:first-child * {
+  justify-content: center;
+  align-content: center;
+}
+
+.questionList .questionListTable tbody td:nth-child(6) {
+  justify-content: left;
+  align-items: baseline;
+  font-size: 0.7rem;
+}
+

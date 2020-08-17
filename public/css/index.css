@@ -1,0 +1,25 @@
+.sendquestion {
+  width: 550px;
+  height: 450px;
+  color: #9597a6;
+  position: relative;
+  right: 200px;
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  background-color: #545871;
+  border-radius: 20px;
+  width: 120px;
+  position: relative;
+  left: 190px;
+}
+
+.name {
+  width: 500px;
+}
+
+.products {
+  color: #9597a6;
+}
+

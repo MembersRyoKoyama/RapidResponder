@@ -1,0 +1,32 @@
+@import "../variables";
+
+.confirmcontent {
+    width: 550px;
+    height: 600px;
+    color: #9597a6;
+    //float: left;
+    position: relative;
+    right: 200px;
+    background-color: #ffffff;
+}
+.submit {
+    background-color: #545871;
+    border-radius: 20px;
+    width: 120px;
+}
+.name {
+    width: 500px;
+}
+.products {
+    color: #9597a6;
+}
+.correction {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 120px;
+    color: #545871;
+    //margin: 20px 250px 0px 0px;
+}
+.form-group {
+    text-align: left;
+}
