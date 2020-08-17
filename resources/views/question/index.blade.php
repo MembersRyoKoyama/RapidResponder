@@ -16,7 +16,7 @@
     </div>
     @endif
 
-    <form action="{{action('QuestionsController@confirm')}}" method="post" class="form">
+    <form action="{{route('questionConfirm')}}" method="post" class="form">
         @csrf
         <!--ゲストの問い合わせフォーム -->
         <label>氏名</label><br>

@@ -67,7 +67,7 @@ class IndexTest extends DuskTestCase
     public function testErrBrowseIndex()
     {
         $question = factory(Question::class)->create([
-            'name' => 'あああああああああああああああああ',
+            'name' => 'あいうえおかきくけこさしすせそたちつ',
             'mail' => 'taylor@laravel.com',
         ]);
         //想定外な値のページ遷移

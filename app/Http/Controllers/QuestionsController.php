@@ -47,6 +47,7 @@ class QuestionsController extends Controller
         $question->content  = $inputs['content'];
         $question->end  = 1;
         $question->save();
+
         //var_dump($question->products_id);
         Mail::to($inputs['mail'])->send(new GuestMail);
         return view('question/send');

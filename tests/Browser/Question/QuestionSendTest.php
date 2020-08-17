@@ -45,18 +45,14 @@ class QuestionSendTest extends DuskTestCase
                 ->type('tel', $question->tel)
                 ->select('products_id', $question->products_id)
                 ->type('content', $question->content)
-                //eval(\Psy\sh());
                 ->press('confirm-btn')
-                //eval(\Psy\sh());
                 ->assertPathIs('/question/confirm')
                 //->press('submit')
                 ->click('.submit')
                 ->assertPathIs('/question/send')
-                //->click('.submit')
                 ->screenshot('filename_1')
                 ->clickLink('トップページに戻る')
-                //->waitForText('氏名')
-                //eval(\Psy\sh());
+                //->press('return-btn')
                 ->assertPathIs('/question');
             //$browser->screenshot('filename_1');
         });

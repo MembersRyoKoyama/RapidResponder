@@ -6,7 +6,7 @@
 
     <p>こちらの内容で送信します</p>
     <p>問題ないですか</p>
-    <form action="{{action('QuestionsController@send')}}" method="post">
+    <form action="{{route('questionSend')}}" method="post">
         @csrf
         <!--ゲストの問い合わせフォーム -->
         <label>氏名</label><br>

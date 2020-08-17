@@ -39,16 +39,16 @@ Route::middleware(['auth'])->group(function () {
 });
 
 //お問い合わせ画面
-Route::get('/question', 'QuestionsController@form');
+Route::get('/question', 'QuestionsController@form')->name('question');
 
 //お問い合わせ確認画面
-Route::post('/question/confirm', 'QuestionsController@confirm');
+Route::post('/question/confirm', 'QuestionsController@confirm')->name('questionConfirm');
 Route::get('/question/confirm', function () {
     return redirect('/question')->with("errors", ["無効な操作です"]);
 });
 
 //送信完了画面
-Route::post('/question/send', 'QuestionsController@send');
+Route::post('/question/send', 'QuestionsController@send')->name('questionSend');
 Route::get('/question/send', function () {
     return redirect('/question')->with("errors", ["無効な操作です"]);
 });
@@ -56,10 +56,10 @@ Route::get('/question/send', function () {
 Route::post('/question', 'QuestionsController@end');
 
 //パスワードリセット
-Route::post('/password/reset/end', 'Auth\ResetPasswordController@resetend');
+Route::post('/password/reset/end', 'Auth\ResetPasswordController@resetend')->name('resetEnd');
 
 //ログアウト
-Route::get('/stafflogout', 'Auth\LogoutController@logout');
+Route::get('/stafflogout', 'Auth\LogoutController@logout')->name('staffLogout');
 
 //パスワード変更完了
-Route::get('/change', 'Auth\ResetPasswordController@changeend');
+Route::get('/change', 'Auth\ResetPasswordController@changeend')->name('passwordChange');
