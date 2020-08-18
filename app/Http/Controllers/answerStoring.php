@@ -26,8 +26,10 @@ class answerStoring extends Controller
         $answer->comment  = $request->comment;
         $answer->message  = $request->message;
         $answer->save();
-        $mailAddress = Question::where('id', $id)->first()->mail;
-        Mail::to($mailAddress)->send(new messageMail($answer));
+
+        $question = Question::where('id', $id)->first();
+        $mailAddress = $question->mail;
+        Mail::to($mailAddress)->send(new messageMail($answer, $question));
         return view('answers/storeComplete');
     }
 }

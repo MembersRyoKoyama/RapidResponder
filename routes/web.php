@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Mail\TestMail;
 use App\Mail\GuestMail;
+use App\Mail\MessageMail;
+use Illuminate\Support\Facades\Mail;
+use App\Answer;
+use App\Question;
 //use Auth;
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +20,10 @@ use App\Mail\GuestMail;
 */
 
 Route::get('mailable', function () {
-    $ans = App\Answer::find(10);
-    return new App\Mail\messageMail($ans);
+    $que = App\Question::find(1);
+    $ans = App\Answer::find(1);
+    Mail::to($que->mail)->send(new App\Mail\messageMail($ans, $que));
+    return new App\Mail\messageMail($ans, $que);
 });
 
 Route::get('/', function () {
