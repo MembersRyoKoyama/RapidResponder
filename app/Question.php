@@ -20,6 +20,10 @@ class Question extends Model
     {
         return $this->hasMany('App\Answer', 'questions_id');
     }
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id');
+    }
     protected $fillable = ['end', 'staffs_id'];
     protected $dates = ['date'];
 }

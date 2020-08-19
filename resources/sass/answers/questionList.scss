@@ -10,6 +10,11 @@
     a:hover {
         text-decoration: none;
     }
+    .dot {
+        color: $gray;
+        font-weight: bold;
+        user-select: none;
+    }
     .questionListTable {
         thead {
             th {

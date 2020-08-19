@@ -9,6 +9,15 @@
   text-decoration: none;
 }
 
+.questionList .dot {
+  color: #9597a6;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .questionList .questionListTable thead th {
   background-color: #dadbe6;
   border: 0;

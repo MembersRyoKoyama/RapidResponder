@@ -35,7 +35,11 @@
       </tr>
       <tr class="d-flex">
         <th class="col-3">お問い合わせ内容</th>
-        <td class="col-9"></td>
+        <td class="col-9">
+          @foreach($tags as $tag)
+          {{$tag->name}}
+          @endforeach
+        </td>
       </tr>
       <tr class="d-flex">
         <td class="text-left">{{$question->content}}</td>

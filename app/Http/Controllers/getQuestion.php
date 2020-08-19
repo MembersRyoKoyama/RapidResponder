@@ -14,7 +14,8 @@ class getQuestion extends Controller
         if (!$obj) {
             return redirect('questionList')->with("errors", ["無効なidです"]);
         }
+        $tags = $obj->tags;
         session(['questions_id' => $id]);
-        return view('answers/questionView', ['question' => $obj]);
+        return view('answers/questionView', ['question' => $obj, 'tags' => $tags]);
     }
 }
