@@ -53,13 +53,13 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8  offset-md-4">
+                            <div class="  offset-md-4">
                                 <button name="login-btn" type="submit" class="btn btn-primary login">
                                     {{ __('ログインする') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                <a class="forget btn btn-link" href="{{ route('password.request') }}" name="password-forget">
+                                <a class="forget btn-link" href="{{ route('password.request') }}" name="password-forget">
                                     {{ __('パスワードを忘れた方はこちら') }}
                                 </a>
                                 @endif
