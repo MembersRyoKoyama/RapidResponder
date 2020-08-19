@@ -4,9 +4,7 @@
 お問い合わせありがとうございました。<br>
 <br>
 
-@component('mail::panel')
-{!! nl2br(e($answer->message)) !!}
-@endcomponent
+
 
 ---
 # お問い合わせ内容

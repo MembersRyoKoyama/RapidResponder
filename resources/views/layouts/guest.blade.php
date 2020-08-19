@@ -17,6 +17,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/sendAnswerForm.js') }}"></script>
+    <script src="{{ asset('js/questionTag.js') }}"></script>
+    <!-- remodal -->
+    <script src="{{asset('js/remodal.min.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -26,6 +29,8 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/confirm.css') }}" rel="stylesheet">
     <link href="{{ asset('css/send.css') }}" rel="stylesheet">
+    <!-- remodal -->
+
 </head>
 
 <body>
