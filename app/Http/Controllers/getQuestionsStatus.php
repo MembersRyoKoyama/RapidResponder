@@ -20,7 +20,7 @@ class getQuestionsStatus extends Controller
             ->groupBy(function ($row) {
                 return $row->date->format('Y-m');
             });
-        $all = count($questions);
+        $all = 0;
         $end = [0, 0, 0, 0];
         $labels = [];
         $datas = [
@@ -35,6 +35,7 @@ class getQuestionsStatus extends Controller
             $datas['end2'][$i] = 0;
             $datas['end3'][$i] = 0;
             foreach ($q as $question) {
+                $all++;
                 switch ($question->end) {
                     case 1:
                         $end[1]++;
