@@ -18,5 +18,7 @@
     "/css/endIcon.css": "/css/endIcon.css",
     "/css/questionList.css": "/css/questionList.css",
     "/css/questionView.css": "/css/questionView.css",
+    "/js/questionTag.js": "/js/questionTag.js",
+    "/js/remodal.min.js": "/js/remodal.min.js",
     "/js/sendAnswerForm.js": "/js/sendAnswerForm.js"
 }

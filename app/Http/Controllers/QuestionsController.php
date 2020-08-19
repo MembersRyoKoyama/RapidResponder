@@ -25,7 +25,7 @@ class QuestionsController extends Controller
             'name'  => 'required | max:16',
             'mail'  => 'required | email | max:200',
             'tel'  => 'required | numeric |digits_between:9,12',
-            'products_id' => 'required ',
+            //'products_id' => 'required ',
             //| digits_between:9,11'
             'content' => 'required | max:2000'
         ]);
@@ -49,7 +49,9 @@ class QuestionsController extends Controller
         $question->save();
 
         //var_dump($question->products_id);
-        Mail::to($inputs['mail'])->send(new GuestMail);
+        //Mail::to($inputs['mail'])->send(new GuestMail);
+
+        Mail::to($inputs['mail'])->send(new GuestMail($question));
         return view('question/send');
     }
     public function end()
