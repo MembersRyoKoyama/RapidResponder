@@ -1,5 +1,9 @@
-.pagingButton {
-    span {
-        margin-right: 5px;
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+        width: 50px;
+        margin: 2px 5px;
+        text-align: center;
     }
 }

@@ -17,6 +17,6 @@ $factory->define(App\Question::class, function (Faker $faker) {
         'content' => $faker->text(2000),
         'end' => random_int(1, 3),
         'staffs_id' => $staffs[random_int(0, count($staffs) - 1)],
-        'date' => $faker->dateTime('now')->format('Y-m-d H:i:s'),
+        'date' => $faker->dateTimeBetween('-5 years', 'now')->format('Y-m-d H:i:s'),
     ];
 });

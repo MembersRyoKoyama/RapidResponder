@@ -21,4 +21,5 @@ class Question extends Model
         return $this->hasMany('App\Answer', 'questions_id');
     }
     protected $fillable = ['end', 'staffs_id'];
+    protected $dates = ['date'];
 }
