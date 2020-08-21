@@ -14,6 +14,7 @@ const mix = require("laravel-mix");
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/sendAnswerForm.js", "public/js")
     .js("resources/js/chart.js", "public/js")
+    .js("resources/js/tagSelector.js", "public/js")
     .js("resources/js/questionTag.js", "public/js")
     .js("resources/js/remodal/remodal.min.js", "public/js")
     .sass("resources/sass/question/index.scss", "public/css")

@@ -22,7 +22,15 @@ class Question extends Model
     }
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id');
+        return $this->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id')
+            ->using('App\QuestionTag');
+    }
+    public function filterByTags($tagid)
+    {
+        return $this
+            ->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id')
+            ->using('App\QuestionTag')
+            ->wherePivotIn('priority', $tagid);
     }
     protected $fillable = ['end', 'staffs_id'];
     protected $dates = ['date'];

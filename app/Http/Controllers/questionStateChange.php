@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Question;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class questionStateChange extends Controller
@@ -29,6 +30,7 @@ class questionStateChange extends Controller
             $obj->update(['staffs_id' => null]);
         }
         $obj->update(['end' => $to]);
-        return view('answers/questionView', ['question' => $obj]);
+        $tags = Tag::all();
+        return view('answers/questionView', ['question' => $obj, 'tags' => $tags]);
     }
 }
