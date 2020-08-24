@@ -13,12 +13,10 @@ const mix = require("laravel-mix");
 
 mix.js("resources/js/app.js", "public/js")
     .js("resources/js/sendAnswerForm.js", "public/js")
-<<<<<<< HEAD
     .js("resources/js/chart.js", "public/js")
-=======
+    .js("resources/js/tagSelector.js", "public/js")
     .js("resources/js/questionTag.js", "public/js")
     .js("resources/js/remodal/remodal.min.js", "public/js")
->>>>>>> 003ffc7970d7325074c3406a8092ea6c19a24aef
     .sass("resources/sass/question/index.scss", "public/css")
     .sass("resources/sass/question/confirm.scss", "public/css")
     .sass("resources/sass/question/send.scss", "public/css")

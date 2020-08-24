@@ -19,5 +19,8 @@
     "/css/questionList.css": "/css/questionList.css",
     "/css/questionView.css": "/css/questionView.css",
     "/js/chart.js": "/js/chart.js",
-    "/js/sendAnswerForm.js": "/js/sendAnswerForm.js"
+    "/js/questionTag.js": "/js/questionTag.js",
+    "/js/remodal.min.js": "/js/remodal.min.js",
+    "/js/sendAnswerForm.js": "/js/sendAnswerForm.js",
+    "/js/tagSelector.js": "/js/tagSelector.js"
 }

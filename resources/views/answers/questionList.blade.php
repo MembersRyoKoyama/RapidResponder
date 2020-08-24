@@ -1,5 +1,9 @@
 @extends('layouts.app')
+@push('scripts')
+<script src="{{ asset('js/tagSelector.js') }}" defer></script>
+@endpush
 @push('styles')
+<link href="{{ asset('css/button.css') }}" rel="stylesheet">
 <link href="{{ asset('css/questionList.css') }}" rel="stylesheet">
 @endpush
 
@@ -19,6 +23,11 @@
         @endfor
     </div>
   </div>
+  <div>
+    @foreach($tags as $tag)
+    <a class="tagSelector button-outline-big" href="{{url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>$tag->id])}}">{{$tag->name}}</a>
+    @endforeach
+  </div>
   <table class="questionListTable table table-sm table-striped ">
     <thead>
       <tr class="d-flex">
@@ -31,7 +40,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr></tr>
+      <tr></tr>{{-- 色変更 --}}
       @foreach($questions as $question)
       <x-list-item :question="$question" />
       @endforeach

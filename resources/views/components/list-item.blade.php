@@ -18,7 +18,14 @@
     <td class="col-2"><span>{{$question->tel}}</span></td>
     <td class="col-1"><span>{{$question->products->name}}</span></td>
     <td class="col-2"><span>{{$question->date}}</span></td>
-    <td class="col-4"><span>{{Str::substr($question->content,0,100)}}</span></td>
+    <td class="col-4">
+        <div>{{Str::substr($question->content,0,100)}}</div>
+        <div>
+            @foreach($question->tags as $tag)
+            <span>{{$tag->name}}</span>
+            @endforeach
+        </div>
+    </td>
     <td class="col-1">
         <span class="detail-button">
             <a href="/questionView?id={{$question->id}}">

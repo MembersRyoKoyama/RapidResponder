@@ -20,6 +20,18 @@ class Question extends Model
     {
         return $this->hasMany('App\Answer', 'questions_id');
     }
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id')
+            ->using('App\QuestionTag');
+    }
+    public function filterByTags($tagid)
+    {
+        return $this
+            ->belongsToMany('App\Tag', 'questions_tags', 'questions_id', 'tags_id')
+            ->using('App\QuestionTag')
+            ->wherePivotIn('priority', $tagid);
+    }
     protected $fillable = ['end', 'staffs_id'];
     protected $dates = ['date'];
 }

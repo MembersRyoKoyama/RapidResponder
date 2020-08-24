@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -106,14 +106,14 @@ $(function () {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!*******************************************!*\
   !*** multi ./resources/js/questionTag.js ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/resources/js/questionTag.js */"./resources/js/questionTag.js");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/questionTag.js */"./resources/js/questionTag.js");
 
 
 /***/ })
