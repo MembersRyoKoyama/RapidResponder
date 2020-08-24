@@ -40,12 +40,32 @@
 
 
 
-        <label>状態タグ　※選択必須</label><br>
-        <select name="tags[]" size="5" multiple>
+        <label>状態タグ　※選択必須・複数選択可
+        </label>
+        <select id="select_box_list" name="tags[]" size="5" multiple>
             @foreach($tags as $tag)
-            <option value="{{$tag->id}}">{{$tag->name}}</option>
+            <option data-no="0" value="{{$tag->id}}">{{$tag->name}}</option>
             @endforeach
-        </select><br><br>
+        </select><br>
+
+        <div class="content">
+            <a class="js-modal-open" href="">クリックでタグを選択</a>
+        </div>
+        <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" class="select_box_list" onclick="CheckBoxClick(this, 0)">初期不良</label>
+                <label for="step1_1"><input type="checkbox" data-no="1" id="step1_1" onclick="CheckBoxClick(this, 1)">パーツ欠損</label>
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">故障</label>
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">老朽化</label>
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">疑問点・質問</label>
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">その他</label>
+
+                <a class="js-modal-close" href="">閉じる</a>
+            </div>
+            <!--modal__inner-->
+        </div>
+        <!--modal-->
 
         <!-- multiple size="5"すると消える 名前を配列化してもダメ size="5" multiple-->
 
@@ -57,7 +77,6 @@
                 確認する
             </button>
         </div>
-
 
     </form>
 

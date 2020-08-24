@@ -3,7 +3,6 @@ import variables from "../sass/_variables.scss";
 $(document).ready(function() {
     const pieCtx = document.getElementById("pie");
     const barCtx = document.getElementById("bar");
-    console.log(Laravel.data);
     const myPieChart = new Chart(pieCtx, {
         type: "pie",
         data: {
@@ -27,7 +26,7 @@ $(document).ready(function() {
             }
         }
     });
-    var myBarChart = new Chart(barCtx, {
+    const myBarChart = new Chart(barCtx, {
         type: "bar",
         data: {
             labels: Laravel.bar.labels,

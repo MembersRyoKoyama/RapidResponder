@@ -9,14 +9,20 @@
     <li class="page-item"><a class="page-link" href="{{url()->current().'?'.http_build_query(['end'=>$end,'p'=>($now-1)])}}">Prev</a></li>
    @endif
   -->
+    @php
+    $pageSize=2;
+    @endphp
     @foreach($pages as $page)
-    <li class="pagingButton">
+    @if($page==1||$page==count($pages)||abs($page-$now)<$pageSize) <li class="pagingButton">
       <a class="" href="{{url()->current().'?'.http_build_query(['end'=>$end,'p'=>($page)])}}">
         <x-button :text='$page' style="{{$now==$page?'button-outline-active':'button-outline'}}" />
       </a>
-    </li>
-    @endforeach
-    <!--
+      </li>
+      @elseif(abs($page-$now)==$pageSize)
+      <span class="dot">・・・</span>
+      @endif
+      @endforeach
+      <!--
    @if($now!=1)
     <li class="page-item"><a class="page-link" href="{{url()->current().'?'.http_build_query(['end'=>$end,'p'=>($now+1)])}}">Next</a></li>
    @endif

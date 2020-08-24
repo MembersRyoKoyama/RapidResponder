@@ -30,6 +30,7 @@ class QuestionsController extends Controller
             'tel'  => 'required | numeric |digits_between:9,12',
             //'products_id' => 'required ',
             //| digits_between:9,11'
+            'tags'  => 'required ',
             'content' => 'required | max:2000'
         ]);
 
@@ -53,7 +54,13 @@ class QuestionsController extends Controller
         $question->content  = $inputs['content'];
         $question->end  = 1;
         $question->save();
-        //$questiontag = new QuestionTag;
+        $taginputs = $inputs['tags'];
+        foreach ($taginputs as $taginput) {
+            $questiontag = new QuestionTag;
+            $questiontag->questions_id = $question->id;
+            $questiontag->tags_id = $taginput;
+            $questiontag->save();
+        }
         //var_dump($question->products_id);
         //Mail::to($inputs['mail'])->send(new GuestMail);
         Mail::to($inputs['mail'])->send(new GuestMail($question));

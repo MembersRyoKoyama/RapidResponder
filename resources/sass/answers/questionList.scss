@@ -7,8 +7,25 @@
         font-family: "Yu Gothic", "游ゴシック Medium", YuGothic, "游ゴシック体",
             "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     }
+    a {
+        user-select: none;
+    }
     a:hover {
         text-decoration: none;
+    }
+    .dot {
+        color: $gray;
+        font-weight: bold;
+        user-select: none;
+    }
+    .button-outline-big:hover {
+        color: $white;
+    }
+    .button-dark {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
     }
     .questionListTable {
         thead {
@@ -45,6 +62,7 @@
                     }
                 }
                 &:nth-child(6) {
+                    flex-direction: column;
                     justify-content: left;
                     align-items: baseline;
                     font-size: 0.7rem;
