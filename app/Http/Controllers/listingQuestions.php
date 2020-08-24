@@ -19,22 +19,16 @@ class listingQuestions extends Controller
         $tagids = explode(',', $request->tagids);
         //var_dump($tagids);
         $t = [];
-        $taaa = Question::whereExists(function ($q) use ($tagids) {
-            $q->select(1)
-                ->from('questions_tags as r')
-                ->whereRaw('questions.id = r.questions_id')
-                ->whereIn('r.tags_id', $tagids);
-            //->havingRaw('count(*)', [count($tagids)]);
-        })->dd();
-        var_dump($taaa);
+
         if ($tagids[0] !== "") {
             $t = Question::whereExists(function ($q) use ($tagids) {
                 $q->from('questions_tags as r')
                     ->whereRaw('questions.id = r.questions_id')
-                    ->whereIn('r.tags_id', $tagids);
-                //->havingRaw('count(*)', [count($tagids)]);
-            })->get();
+                    ->whereIn('r.tags_id', $tagids)
+                    ->havingRaw('count(*) = ' . count($tagids));
+            })->where('end', $end)->distinct()->orderBy('date')->get();
 
+            // phpでフィルタリング（激重）
             // $tt = Question::where('end', $end)->orderBy('date')->get();
             // foreach ($tt as $question) {
             //     $ttt = $tagids;
