@@ -10,7 +10,7 @@
 @section('content')
 <div class="container questionList">
   <h1 class="text-center">お問い合わせ一覧</h1>
-  @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end])
+  @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end,'selectedTags'=>$selectedTags])
   <div class="dropdown">
     <button type="button" id="dropdown1" class="endMenu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <x-end-icon :end="$end" />
@@ -24,8 +24,25 @@
     </div>
   </div>
   <div>
+
     @foreach($tags as $tag)
-    <a class="tagSelector button-outline-big" href="{{url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>$tag->id])}}">{{$tag->name}}</a>
+    @php
+    $t = $selectedTags;
+    if(in_array($tag->id,$selectedTags)){
+    if (is_array($tag->id)) {
+    $t = array_diff($t, $tag->id);
+    } else {
+    $t = array_diff($t, [$tag->id]);
+    }
+    $t=array_values($t);
+    }
+    @endphp
+    @if(in_array($tag->id,$selectedTags))
+    <a class="tagSelector button-dark" href="{{url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>implode(',',$t)])}}">{{$tag->name}}</a>
+    @else
+    <a class="tagSelector button-outline-big" href="{!!url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>(implode(',',$selectedTags)?implode(',',$selectedTags).',':'').$tag->id])!!}">{{$tag->name}}</a>
+
+    @endif
     @endforeach
   </div>
   <table class="questionListTable table table-sm table-striped ">
@@ -46,6 +63,6 @@
       @endforeach
     <tbody>
   </table>
-  @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end])
+  @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end,'selectedTags'=>$selectedTags])
 </div>
 @endsection
