@@ -36,13 +36,11 @@
             @foreach($products as $product)
             <option value="{{$product->id}}" @if(old('products_id')==$product->id ) selected @endif>{{$product->name}}</option>
             @endforeach
-        </select><br><br>
-
-
+        </select><br>
 
         <label>状態タグ　※選択必須・複数選択可
         </label>
-        <select id="select_box_list" name="tags[]" size="5" multiple>
+        <select id="select_box_list" name="tags[]" size="5" multiple hidden>
             @foreach($tags as $tag)
             <option data-no="0" value="{{$tag->id}}">{{$tag->name}}</option>
             @endforeach
@@ -54,12 +52,12 @@
         <div class="modal js-modal">
             <div class="modal__bg js-modal-close"></div>
             <div class="modal__content">
-                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" class="select_box_list" onclick="CheckBoxClick(this, 0)">初期不良</label>
-                <label for="step1_1"><input type="checkbox" data-no="1" id="step1_1" onclick="CheckBoxClick(this, 1)">パーツ欠損</label>
-                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">故障</label>
-                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">老朽化</label>
-                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">疑問点・質問</label>
-                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" onclick="CheckBoxClick(this, 0)">その他</label>
+                <label for="step1_0"><input type="checkbox" data-no="0" id="step1_0" class="js-check">初期不良</label>
+                <label for="step1_1"><input type="checkbox" data-no="1" id="step1_1" class="js-check">パーツ欠損</label>
+                <label for="step1_2"><input type="checkbox" data-no="2" id="step1_2" class="js-check">故障</label>
+                <label for="step1_3"><input type="checkbox" data-no="3" id="step1_3" class="js-check">老朽化</label>
+                <label for="step1_4"><input type="checkbox" data-no="4" id="step1_4" class="js-check">疑問点・質問</label>
+                <label for="step1_5"><input type="checkbox" data-no="5" id="step1_5" class="js-check">その他</label>
 
                 <a class="js-modal-close" href="">閉じる</a>
             </div>

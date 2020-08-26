@@ -8,6 +8,7 @@ class Question extends Model
 {
 
     public $timestamps = false;
+
     public function products()
     {
         return $this->belongsTo('App\Product');

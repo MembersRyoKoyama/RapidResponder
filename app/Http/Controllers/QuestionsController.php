@@ -30,7 +30,7 @@ class QuestionsController extends Controller
             'tel'  => 'required | numeric |digits_between:9,12',
             //'products_id' => 'required ',
             //| digits_between:9,11'
-            'tags'  => 'required ',
+            //'tags'  => 'required ',
             'content' => 'required | max:2000'
         ]);
 
@@ -39,9 +39,13 @@ class QuestionsController extends Controller
         $products = Product::where('id', $inputs['products_id'])->first();
         $tags    = Tag::whereIn('id', $inputs['tags'])
             ->get();
+        $tagvalue = '';
+        foreach ($tags as $tag) {
+            $tagvalue =  $tagvalue . ' ' . $tag->name;
+        }
         //Tag::where($inputs['tags']);
         //var_dump($tags);
-        return view('question/confirm', ['inputs' => $inputs, 'products' => $products->name, 'tags' => $tags]);
+        return view('question/confirm', ['inputs' => $inputs, 'products' => $products->name, 'tags' => $tags, 'tagvalue' => $tagvalue]);
     }
     public function send(Request $request)
     {
