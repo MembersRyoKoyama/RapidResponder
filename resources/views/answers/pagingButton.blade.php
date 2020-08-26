@@ -14,7 +14,7 @@
     @endphp
     @foreach($pages as $page)
     @if($page==1||$page==count($pages)||abs($page-$now)<$pageSize) <li class="pagingButton">
-      <a class="" href="{{url()->current().'?'.http_build_query(['end'=>$end,'p'=>($page)])}}">
+      <a class="" href="{{url()->current().'?'.http_build_query(['end'=>$end,'p'=>($page),'tagids'=>implode(',',$selectedTags)])}}">
         <x-button :text='$page' style="{{$now==$page?'button-outline-active':'button-outline'}}" />
       </a>
       </li>
