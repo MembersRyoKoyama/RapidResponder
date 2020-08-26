@@ -11,7 +11,7 @@ class QuestionTableSeeder extends Seeder
      */
     public function run()
     {
-        $num = 1000;
+        $num = 10;
         $staffs = App\User::pluck('id')->all();
         $products = App\Product::pluck('id')->all();
         //end=3;staff=5;

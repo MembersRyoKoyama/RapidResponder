@@ -725,7 +725,6 @@ __webpack_require__.r(__webpack_exports__);
 $(document).ready(function () {
   var pieCtx = document.getElementById("pie");
   var barCtx = document.getElementById("bar");
-  console.log(Laravel.data);
   var myPieChart = new Chart(pieCtx, {
     type: "pie",
     data: {
@@ -827,7 +826,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/chart.js */"./resources/js/chart.js");
+module.exports = __webpack_require__(/*! /var/www/resources/js/chart.js */"./resources/js/chart.js");
 
 
 /***/ })

@@ -98,6 +98,20 @@ $(function () {
     $(".js-modal").fadeIn();
     return false;
   });
+  var tagindex = [];
+  $(".js-check").on("click", function () {
+    if ($(this).prop("checked") == true) {
+      var index = $(".js-check").index(this);
+      tagindex.push(index + 1);
+    } else {
+      var index = $(".js-check").index(this);
+      var deleteindex = tagindex.indexOf(index + 1);
+      tagindex.splice(deleteindex, 1);
+    }
+
+    $("#select_box_list").val(tagindex);
+    console.log(index);
+  });
   $(".js-modal-close").on("click", function () {
     $(".js-modal").fadeOut();
     return false;
@@ -113,7 +127,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/questionTag.js */"./resources/js/questionTag.js");
+module.exports = __webpack_require__(/*! /var/www/resources/js/questionTag.js */"./resources/js/questionTag.js");
 
 
 /***/ })
