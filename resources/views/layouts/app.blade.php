@@ -51,12 +51,14 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav m-auto">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <a type="button" href="{{ route('supportStatus') }}" style="margin-right:10px;">対応状況</a>
+
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">

@@ -61,28 +61,29 @@ class PageTransitionTest extends DuskTestCase
         $this->browse(function ($browser) use ($user, $num) {
             $browser->loginAs($user)
                 ->visit('/questionList')
-                ->assertPathIs('/questionList');
-            $browser->driver->findElement(WebDriverBy::xpath('//*[@id="app"]/main/div/table/tbody[1]/tr[' . ($num + 1) . ']/td[7]/span/a/span'))->click();
+                ->assertPathIs('/questionList')
+                ->driver->findElement(WebDriverBy::xpath('//*[@id="app"]/main/div/table/tbody[1]/tr[' . ($num + 1) . ']/td[7]/span/a/span'))->click();
             $browser->assertQueryStringHas('id', $this->questions[1][$num - 1]->id);
             $browser->screenshot('filename_3');
             $q = $this->questions[1][$num - 1];
             $check = [
                 'name' => $q->name,
-                'date' => $q->date,
-                'tel' => $q->tel,
+                'date' => (string)$q->date->format('Y-m-d'),
+                'tel' => (string)$q->tel,
                 'products_id' => $q->products->name,
                 'content' => $q->content,
             ];
-
-            foreach ($check as $k => $v) {
-                //eval(\Psy\sh());
-                $browser->assertSee($v);
-            }
+            $browser->assertSee($check['name'])
+                ->assertSee($check['date'])
+                ->assertSee($check['tel'])
+                ->assertSee($check['products_id'])
+                ->assertSee($check['content']);
             //eval(\Psy\sh());
-            //->assertPathIs('/questionView?id=' . "{{$this->questions[1][3]->id}}");
-            // //<a href="/questionView?id={{$question->id}}">
-            // // ->clickLink('対応開始')
-            // ->clickLink('未対応に戻す');
+            //$browser->assertSee($check['date']);
+            // foreach ($check as $k) {
+            //     eval(\Psy\sh());
+            //     $browser->assertSee($check['name']);
+            // }
         });
     }
     /**
@@ -119,6 +120,21 @@ class PageTransitionTest extends DuskTestCase
                 ->assertQueryStringHas('id', $this->questions[1][0]->id)
                 ->assertSeeIn('.endIcon', '未対応')
                 ->screenshot('filename_3');
+        });
+    }
+    /**
+     * @group transitionTest
+     * A Dusk test example.
+     * @test
+     */
+    public function supportStatusTransition()
+    {
+        $user = factory(User::class)->create();
+        $this->browse(function ($browser) use ($user) {
+            $browser->loginAs($user)
+                ->visit('/questionList')
+                ->clickLink("対応状況")
+                ->assertSee('/supportStatus');
         });
     }
 }

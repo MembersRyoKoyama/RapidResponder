@@ -30,7 +30,7 @@ class QuestionSendTest extends DuskTestCase
      * A Dusk test example.
      *
      * @return void
-     * @group  send
+     * @group send
      */
     public function testSendQuestion()
     {

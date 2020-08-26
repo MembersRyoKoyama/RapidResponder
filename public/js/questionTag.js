@@ -127,7 +127,7 @@ $(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/resources/js/questionTag.js */"./resources/js/questionTag.js");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/questionTag.js */"./resources/js/questionTag.js");
 
 
 /***/ })

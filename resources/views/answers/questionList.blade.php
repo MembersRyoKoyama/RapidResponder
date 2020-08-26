@@ -57,7 +57,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr></tr>{{-- 色変更 --}}
+      <tr></tr>{{-- bootstrapの色変更 --}}
       @foreach($questions as $question)
       <x-list-item :question="$question" />
       @endforeach

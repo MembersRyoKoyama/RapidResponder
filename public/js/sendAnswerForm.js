@@ -146,7 +146,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/resources/js/sendAnswerForm.js */"./resources/js/sendAnswerForm.js");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/sendAnswerForm.js */"./resources/js/sendAnswerForm.js");
 
 
 /***/ })

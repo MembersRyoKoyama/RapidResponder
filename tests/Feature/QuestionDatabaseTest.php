@@ -17,7 +17,8 @@ class QuestionDatabaseTest extends TestCase
         parent::setUp();
         $this->seed([
             'ProductTableSeeder',
-            'UserTableSeeder'
+            'UserTableSeeder',
+            'TagTableSeeder'
         ]);
     }
     public function tearDown(): void
@@ -33,12 +34,11 @@ class QuestionDatabaseTest extends TestCase
      */
     public function testQuestionDatabase()
     {
-        $question = factory(Question::class)->make([
+        $question = factory(Question::class)->create([
             'name' => 'abcde',
             'mail' => 'taylor@laravel.com',
             'end'  =>  '1',
         ]);
-
         $questionContents = [
             'name' => $question->name,
             'mail' => $question->mail,
@@ -46,10 +46,9 @@ class QuestionDatabaseTest extends TestCase
             'products_id' => $question->products_id,
             'content'     => $question->content,
             'end'         => $question->end,
-            'tags[]'        => 1
         ];
+        $this->withoutExceptionHandling();
         $this->post("/question/send", $questionContents)
-            ->dump()
             ->assertOk();
         $this->assertDatabaseHas('questions', $questionContents);
     }

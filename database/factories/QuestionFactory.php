@@ -8,7 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(App\Question::class, function (Faker $faker) {
     $staffs = App\User::pluck('id')->all();
     $products = App\Product::pluck('id')->all();
-
     return [
         'name' => $faker->name,
         'mail' => $faker->unique()->safeEmail,
