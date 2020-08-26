@@ -1,0 +1,6 @@
+From [32mtests/Browser/PasswordResetTest.php:49[39m:
+    [34m47[39m: [33m                ->[39mpress[33m([39m[32m'#email-btn'[39m[33m);[39m
+    [34m48[39m: [33m            [39m$urlsha256 [33m= [39mDB[33m::[39mtable[33m([39m[32m'password_resets'[39m[33m)->[39mwhere[33m([39m[32m'email'[39m[33m, [39m$user[33m->[39mexif_thumbnail[33m)->[39mfirst[33m();[39m
+  [31m>[39m [34m49[39m: [33m            eval([39m\Psy\Sh[33m());[39m
+    [34m50[39m: [33m            [39m$browser[33m->[39massertSee[33m([39m[32m'unko'[39m[33m);[39m
+    [34m51[39m: [33m        });[39m
