@@ -38,7 +38,6 @@ class QuestionDatabaseTest extends TestCase
             'id' => '1',
             'end'  =>  '1',
         ]);
-
         $questionContents = [
             'name' => $question->name,
             'mail' => $question->mail,

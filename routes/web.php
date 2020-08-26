@@ -40,7 +40,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/questionList', 'listingQuestions');
     Route::get('/questionView', 'getQuestion');
     Route::get('/questionStateChange', 'questionStateChange');
-    Route::get('/supportStatus', 'getQuestionsStatus');
+    Route::get('/supportStatus', 'getQuestionsStatus')->name('supportStatus');
     Route::post('/answerConfirmation', 'answerValidation');
     Route::post('/answerStoreComplete', 'answerStoring');
 });
