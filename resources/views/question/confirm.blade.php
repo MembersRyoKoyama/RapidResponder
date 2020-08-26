@@ -22,6 +22,12 @@
         <input type="text" name="products_id" value="{{$inputs['products_id']}}" hidden>
         <input type="text" value="{{$products}}" readonly><br>
 
+        <select name="tags[]" size={{count($tags)}} multiple>
+            @foreach($tags as $tag)
+            <option value="{{$tag->id}}" selected>{{$tag->name}}</option>
+            @endforeach
+        </select><br>
+
         <label>お問い合わせ内容</label><br>
         <textarea name="content" cols="50" rows="5" readonly>{{$inputs['content']}}</textarea>
 

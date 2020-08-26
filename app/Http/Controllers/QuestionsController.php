@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Question;
+use App\Tag;
+use App\QuestionTag;
 use App\Mail\GuestMail;
 use Illuminate\Support\Facades\Mail;
 
@@ -14,8 +16,9 @@ class QuestionsController extends Controller
     public function form()
     {
         $products = Product::get();
+        $tags     = Tag::get();
         //var_dump($products);
-        return view('question/index', ['products' => $products]);
+        return view('question/index', ['products' => $products, 'tags' => $tags]);
     }
 
     public function confirm(Request $request)
@@ -27,14 +30,18 @@ class QuestionsController extends Controller
             'tel'  => 'required | numeric |digits_between:9,12',
             //'products_id' => 'required ',
             //| digits_between:9,11'
+            'tags'  => 'required ',
             'content' => 'required | max:2000'
         ]);
 
         //フォームから受け取->ったすべてのinputの値を取得
         $inputs = $request->all();
         $products = Product::where('id', $inputs['products_id'])->first();
-        //var_dump($inputs, $products->name);
-        return view('question/confirm', ['inputs' => $inputs, 'products' => $products->name]);
+        $tags    = Tag::whereIn('id', $inputs['tags'])
+            ->get();
+        //Tag::where($inputs['tags']);
+        //var_dump($tags);
+        return view('question/confirm', ['inputs' => $inputs, 'products' => $products->name, 'tags' => $tags]);
     }
     public function send(Request $request)
     {
@@ -47,10 +54,15 @@ class QuestionsController extends Controller
         $question->content  = $inputs['content'];
         $question->end  = 1;
         $question->save();
-
+        $taginputs = $inputs['tags'];
+        foreach ($taginputs as $taginput) {
+            $questiontag = new QuestionTag;
+            $questiontag->questions_id = $question->id;
+            $questiontag->tags_id = $taginput;
+            $questiontag->save();
+        }
         //var_dump($question->products_id);
         //Mail::to($inputs['mail'])->send(new GuestMail);
-
         Mail::to($inputs['mail'])->send(new GuestMail($question));
         return view('question/send');
     }

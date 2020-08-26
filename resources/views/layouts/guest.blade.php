@@ -20,6 +20,7 @@
     <script src="{{ asset('js/questionTag.js') }}"></script>
     <!-- remodal -->
     <script src="{{asset('js/remodal.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js" integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A==" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -29,6 +30,8 @@
     <link href="{{ asset('css/index.css') }}" rel="stylesheet">
     <link href="{{ asset('css/confirm.css') }}" rel="stylesheet">
     <link href="{{ asset('css/send.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.css" integrity="sha512-nF9G9AnUEVv+zx285OqwGE8c1gmkys3qV6iuDK5rVG/UuZLWRgGBy/tN5WzSXXuZDZ1YvwhJ9+a/DTj71L8Lrw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.css" integrity="sha512-LVOzFPLcBUppn3NOx8FXJkh2TawWu/jk9ynbntKID6cjynQsfqmHlUbH72mjAwZXsu0LOLw26JoiC0qHJde70Q==" crossorigin="anonymous" />
     <!-- remodal -->
 
 </head>

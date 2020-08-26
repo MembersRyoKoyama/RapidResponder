@@ -827,7 +827,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/chart.js */"./resources/js/chart.js");
+module.exports = __webpack_require__(/*! /var/www/resources/js/chart.js */"./resources/js/chart.js");
 
 
 /***/ })
