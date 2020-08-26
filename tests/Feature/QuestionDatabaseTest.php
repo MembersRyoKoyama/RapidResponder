@@ -44,10 +44,12 @@ class QuestionDatabaseTest extends TestCase
             'mail' => $question->mail,
             'tel'  => $question->tel,
             'products_id' => $question->products_id,
-            'content'     => '1',
+            'content'     => $question->content,
             'end'         => $question->end,
+            'tags[]'        => 1
         ];
         $this->post("/question/send", $questionContents)
+            ->dump()
             ->assertOk();
         $this->assertDatabaseHas('questions', $questionContents);
     }

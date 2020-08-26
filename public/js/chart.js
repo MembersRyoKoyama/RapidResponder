@@ -725,7 +725,6 @@ __webpack_require__.r(__webpack_exports__);
 $(document).ready(function () {
   var pieCtx = document.getElementById("pie");
   var barCtx = document.getElementById("bar");
-  console.log(Laravel.data);
   var myPieChart = new Chart(pieCtx, {
     type: "pie",
     data: {
