@@ -30,7 +30,7 @@ class QuestionsController extends Controller
             'tel'  => 'required | numeric |digits_between:9,12',
             //'products_id' => 'required ',
             //| digits_between:9,11'
-            //'tags'  => 'required ',
+            'tags'  => 'required ',
             'content' => 'required | max:2000'
         ]);
 

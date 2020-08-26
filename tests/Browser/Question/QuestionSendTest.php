@@ -6,6 +6,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 use App\Question;
+use App\Tag;
 use App\Product;
 use Laravel\Dusk\Chrome;
 use Illuminate\Support\Facades\Artisan;
@@ -19,6 +20,7 @@ class QuestionSendTest extends DuskTestCase
         $this->seed([
             'ProductTableSeeder',
             'UserTableSeeder',
+            'TagTableSeeder',
         ]);
     }
     public function tearDown(): void
@@ -37,6 +39,7 @@ class QuestionSendTest extends DuskTestCase
         $question = factory(Question::class)->make([
             'mail' => 'taylor@laravel.com',
         ]);
+        //$taginputs = factory(Tag::class)->make([]);
         //想定された値のページ遷移 送信完了画面まで
         $this->browse(function ($browser) use ($question) {
             $browser->visit('/question')
@@ -44,11 +47,18 @@ class QuestionSendTest extends DuskTestCase
                 ->type('mail', $question->mail)
                 ->type('tel', $question->tel)
                 ->select('products_id', $question->products_id)
+                ->click('.js-modal-open')
+                ->click('#step1_0')
+                ->clickLInk('閉じる')
+                //->select('#select_box_list', 1)
                 ->type('content', $question->content)
                 ->press('confirm-btn')
-                ->assertPathIs('/question/confirm')
-                //->press('submit')
-                ->click('.submit')
+                ->assertPathIs('/question/confirm');
+            //->press('submit')
+            $browser->click('#submit')
+                //->clickLink('送信する')
+                //->doubleClick('送信する')
+                //->waitForText('完了しました')
                 ->assertPathIs('/question/send')
                 ->screenshot('filename_1')
                 ->clickLink('トップページに戻る')
