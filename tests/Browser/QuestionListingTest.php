@@ -10,11 +10,12 @@ use Illuminate\Support\Facades\Artisan;
 use App\Question as Question;
 use App\User as User;
 use App\Product as Product;
+use App\Tag as Tag;
 
 class QuestionListingTest extends DuskTestCase
 {
     use DatabaseMigrations;
-    private $questions, $num;
+    private $questions, $tags, $num;
 
     protected function setUp(): void
     {
@@ -23,6 +24,7 @@ class QuestionListingTest extends DuskTestCase
         $this->seed([
             'ProductTableSeeder',
             'UserTableSeeder',
+            'TagTableSeeder',
         ]);
 
         $this->num = 10;

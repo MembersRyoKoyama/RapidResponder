@@ -16,7 +16,8 @@ class QuestionTagTableSeeder extends Seeder
         $n = [1, 2, 3, 4, 5, 6];
         for ($i = 1; $i <= $questionsNum; ++$i) {
             shuffle($n);
-            for ($j = 0; $j <= random_int(0, $tagsNum - 1); ++$j) {
+            $t = random_int(0, $tagsNum - 1);
+            for ($j = 0; $j <= $t; ++$j) {
                 DB::table('questions_tags')
                     ->insert([
                         'questions_id' => $i,
