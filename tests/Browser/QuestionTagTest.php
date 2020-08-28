@@ -16,7 +16,7 @@ class QuestionTagTest extends DuskTestCase
 {
     use DatabaseMigrations;
     private $questions, $tags, $num;
-    private $tag_name = ['初期不良', 'パーツ欠損', '故障', '老朽化', '疑問点・質問', 'その他'];
+    private $tag_name, $exceptTag;
 
     protected function setUp(): void
     {
@@ -30,7 +30,7 @@ class QuestionTagTest extends DuskTestCase
 
         $this->num = 10;
         $products = Product::pluck('id')->all();
-
+        $this->tag_name = Tag::pluck('name')->all();
 
         for ($j = 0; $j < $this->num; $j++) {
             factory(Question::class)->create([
@@ -41,8 +41,9 @@ class QuestionTagTest extends DuskTestCase
         }
         $this->questions = Question::where('end', 1)->orderBy('date')->get();
         $questionsNum = $this->num; //count(Question::pluck('id')->all());
-        $tagsNum = 4;
+        $this->exceptTag = [6, 3];
         $n = [1, 2, 4, 5];
+        $tagsNum = count($this->tag_name) - count($this->exceptTag);
         for ($i = 0; $i < $questionsNum; ++$i) {
             shuffle($n);
             $t = random_int(1, $tagsNum);
@@ -55,21 +56,21 @@ class QuestionTagTest extends DuskTestCase
                     ]);
                 $this->tags[$i][] = $n[$j];
             }
-            if ($i % 4 == 0) {
-                $this->tags[$i][] = 6;
+            if ($i % (int)($this->num / 2) == 0) {
+                $this->tags[$i][] = $this->exceptTag[0];
                 DB::table('questions_tags')
                     ->insert([
                         'questions_id' => $this->questions[$i]->id,
-                        'tags_id' => 6,
+                        'tags_id' => $this->exceptTag[0],
                     ]);
             }
             if ($i % 3 == 0) {
                 DB::table('questions_tags')
                     ->insert([
                         'questions_id' => $this->questions[$i]->id,
-                        'tags_id' => 3,
+                        'tags_id' => $this->exceptTag[1],
                     ]);
-                $this->tags[$i][] = 3;
+                $this->tags[$i][] = $this->exceptTag[1];
             }
             sort($this->tags[$i]);
             for ($j = 0; $j < count($this->tags[$i]); ++$j) {
@@ -104,7 +105,7 @@ class QuestionTagTest extends DuskTestCase
         });
     }
     /**
-     * @group tagTest2
+     * @group tagTest
      * 質問一覧画面(検索あり)のテスト
      * @test
      */
@@ -116,15 +117,15 @@ class QuestionTagTest extends DuskTestCase
             $first->loginAs($user)
                 ->visit('/questionList')
                 ->assertPathIs('/questionList')
-                ->clickLink($this->tag_name[2])
-                ->clickLink($this->tag_name[5])
-                ->assertQueryStringHas('tagids', "3,6")
+                ->clickLink($this->tag_name[$this->exceptTag[0] - 1])
+                ->clickLink($this->tag_name[$this->exceptTag[1] - 1])
+                ->assertQueryStringHas('tagids', ($this->exceptTag[0]) . ',' . ($this->exceptTag[1]))
                 ->assertSee($q[0]->name)
                 ->assertDontSee($q[1]->name);
         });
     }
     /**
-     * @group tagTest2
+     * @group tagTest
      * 質問詳細画面のテスト
      * @test
      */
@@ -137,10 +138,10 @@ class QuestionTagTest extends DuskTestCase
                 ->visit('/questionView?id=' . $id)
                 ->assertPathIs('/questionView');
             //eval(\Psy\Sh());
-            $first->assertSee($this->tag_name[2])
-                ->assertSee($this->tag_name[5]);
+            $first->assertSee($this->tag_name[$this->exceptTag[0] - 1]);
+            $first->assertSee($this->tag_name[$this->exceptTag[1] - 1]);
             // for ($j = 0; $j < count($this->tags[0]); ++$j) {
-            // $first->assertSee($this->tag_name[$j])
+            // $first->assertSee($this->tag_name[$j]);
             // }
         });
     }
