@@ -37,7 +37,7 @@ class QuestionsController extends Controller
         //フォームから受け取->ったすべてのinputの値を取得
         $inputs = $request->all();
         $products = Product::where('id', $inputs['products_id'])->first();
-        var_dump($inputs);
+        //var_dump($inputs);
         $tags    = Tag::whereIn('id', $inputs['tags'])
             ->get();
         $tagvalue = '';
