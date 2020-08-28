@@ -65,9 +65,7 @@ $(document).ready(function() {
                         labelString: "月",
                         stacked: true,
                         ticks: {
-                            suggestedMax: 100,
-                            suggestedMin: 0,
-                            stepSize: 50,
+                            stepSize: 25,
                             callback: function(value, index, values) {
                                 return value;
                             }
