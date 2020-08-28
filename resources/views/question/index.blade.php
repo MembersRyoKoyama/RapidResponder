@@ -22,13 +22,13 @@
         @csrf
         <!--ゲストの問い合わせフォーム -->
         <label>氏名　<span>※入力必須</span></label><br>
-        <input placeholder="16文字まで" type="text" name="name" value="{{old('name')}}" class="name"><br>
+        <input placeholder="16文字まで" type="text" name="name" value="{{old('name')}}" class="name" id="name"><br>
 
         <label>メールアドレス　※入力必須</label><br>
-        <input placeholder="英数字記号のみ" type="text" name="mail" value="{{old('mail')}}" class="name"><br>
+        <input placeholder="英数字記号のみ" type="text" name="mail" value="{{old('mail')}}" class="name" id="mail"><br>
 
         <label>電話番号　※入力必須</label><br>
-        <input placeholder="数字のみ　12桁まで" type="text" name="tel" value="{{old('tel')}}" class="name"><br>
+        <input placeholder="数字のみ　12桁まで" type="text" name="tel" value="{{old('tel')}}" class="name" id="tel"><br>
 
         <label>製品種別　※入力必須</label><br>
         <select name="products_id">
@@ -68,7 +68,7 @@
         <!-- multiple size="5"すると消える 名前を配列化してもダメ size="5" multiple-->
 
         <label>お問い合わせ内容　※入力必須</label><br>
-        <textarea placeholder="2000文字まで" name="content" cols="50" rows="5" value="{{old('content')}}" class="name">{{old('content')}}</textarea>
+        <textarea placeholder="2000文字まで" name="content" cols="50" rows="5" value="{{old('content')}}" class="name" id="content">{{old('content')}}</textarea>
 
         <div class="form-group ">
             <button name="confirm-btn" type="submit" class="btn btn-primary">

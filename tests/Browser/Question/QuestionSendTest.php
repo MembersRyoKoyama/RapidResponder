@@ -49,7 +49,7 @@ class QuestionSendTest extends DuskTestCase
                 ->select('products_id', $question->products_id)
                 ->click('.js-modal-open')
                 ->click('#step1_0')
-                ->clickLInk('閉じる')
+                ->clickLink('閉じる')
                 //->select('#select_box_list', 1)
                 ->type('content', $question->content)
                 ->press('confirm-btn')

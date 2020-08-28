@@ -18,7 +18,8 @@ class IndexTest extends DuskTestCase
         parent::setUp();
         $this->seed([
             'ProductTableSeeder',
-            'UserTableSeeder'
+            'UserTableSeeder',
+            'TagTableSeeder',
         ]);
     }
     public function tearDown(): void
@@ -45,6 +46,11 @@ class IndexTest extends DuskTestCase
                 ->type('tel', $question->tel)
                 ->select('products_id', $question->products_id)
                 ->type('content', $question->content)
+                //タグ
+                ->click('.js-modal-open')
+                ->check('#step1_0')
+                ->assertChecked('#step1_0')
+                ->clickLink('閉じる')
                 ->press('confirm-btn')
                 ->assertPathIs('/question/confirm');
 
