@@ -35,12 +35,11 @@
         <textarea name=" content" cols="50" rows="5" readonly>{{$inputs['content']}}</textarea>
 
 
-        <div class="form-group ">
+        <div class="form-group">
             <a class="btn btn-primary correction inline-block_test" href="javascript:history.back()">　修正する　</a>
             <button type="submit" class="btn btn-primary submit inline-block_test" name="submit" id="submit">
                 送信する
             </button>
-
         </div>
     </form>
 </div>

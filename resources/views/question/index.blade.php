@@ -52,7 +52,7 @@
         <div class="modal js-modal">
             <div class="modal__bg js-modal-close"></div>
             <div class="modal__content">
-                <input type="checkbox" data-no="0" id="step1_0" class=" js-check"> <label for="step1_0"> 初期不良</label><br>
+                <input type="checkbox" data-no="0" id="step1_0" class=" js-check"><label for="step1_0"> 初期不良</label><br>
                 <input type="checkbox" data-no="1" id="step1_1" class="js-check"><label for="step1_1"> パーツ欠損</label><br>
                 <input type="checkbox" data-no="2" id="step1_2" class="js-check"><label for="step1_2"> 故障</label><br>
                 <input type="checkbox" data-no="3" id="step1_3" class="js-check"><label for="step1_3"> 老朽化</label><br>

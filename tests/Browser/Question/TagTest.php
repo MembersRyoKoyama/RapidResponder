@@ -8,6 +8,7 @@ use Tests\DuskTestCase;
 use Illuminate\Support\Facades\Artisan;
 use Laravel\Dusk\Chrome;
 use App\Tag;
+use Facebook\WebDriver\WebDriverBy;
 
 class TagTest extends DuskTestCase
 {
@@ -37,8 +38,10 @@ class TagTest extends DuskTestCase
         $this->browse(function ($browser) {
             $browser->visit('/question')
                 ->click('.js-modal-open')
-                ->check('#step1_0')
-                ->assertChecked('#step1_0')
+                ->driver
+                ->findElement(WebDriverBy::xpath('//*[@id="app"]/main/div/form/div[2]/div[2]/label[1]'))
+                ->click();
+            $browser->assertChecked('#step1_0')
                 ->clickLink('閉じる')
                 ->pause(1000)
                 ->screenshot('filename_1')
