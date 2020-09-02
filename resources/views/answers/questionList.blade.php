@@ -13,7 +13,7 @@
   @include('answers.pagingButton',['pages'=>$pages,'now'=>$now,'end'=>$end,'selectedTags'=>$selectedTags])
   <div class="dropdown">
     <button type="button" id="dropdown1" class="endMenu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <x-end-icon :end="$end" />
+      <x-end-icon end="$end" />
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdown1">
       @for($i=1;$i<=3;++$i) @if($i!=$end) <a class="dropdown-item" href="{{url()->current().'?'.http_build_query(['end'=>$i])}}">
@@ -23,28 +23,27 @@
         @endfor
     </div>
   </div>
-  <div>
 
-    @foreach($tags as $tag)
-    @php
-    $t = $selectedTags;
-    if(in_array($tag->id,$selectedTags)){
-    if (is_array($tag->id)) {
-    $t = array_diff($t, $tag->id);
-    } else {
-    $t = array_diff($t, [$tag->id]);
-    }
-    $t=array_values($t);
-    }
-    @endphp
-    @if(in_array($tag->id,$selectedTags))
-    <a class="tagSelector button-dark" href="{{url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>implode(',',$t)])}}">{{$tag->name}}</a>
-    @else
-    <a class="tagSelector button-outline-big" href="{!!url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>(implode(',',$selectedTags)?implode(',',$selectedTags).',':'').$tag->id])!!}">{{$tag->name}}</a>
+  @foreach($tags as $tag)
+  @php
+  $t = $selectedTags;
+  if(in_array($tag->id,$selectedTags)){
+  if (is_array($tag->id)) {
+  $t = array_diff($t, $tag->id);
+  } else {
+  $t = array_diff($t, [$tag->id]);
+  }
+  $t=array_values($t);
+  }
+  @endphp
+  @if(in_array($tag->id,$selectedTags))
+  <a class="tagSelector button-dark" href="{{url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>implode(',',$t)])}}">{{$tag->name}}</a>
+  @else
+  <a class="tagSelector button-outline-big" href="{!!url()->current().'?'.http_build_query(['end'=>$end,'tagids'=>(implode(',',$selectedTags)?implode(',',$selectedTags).',':'').$tag->id])!!}">{{$tag->name}}</a>
 
-    @endif
-    @endforeach
-  </div>
+  @endif
+  @endforeach
+
   <table class="questionListTable table table-sm table-striped ">
     <thead>
       <tr class="d-flex">

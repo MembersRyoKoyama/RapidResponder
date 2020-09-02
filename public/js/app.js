@@ -49916,6 +49916,18 @@ module.exports = {"end1":"#ec4e4e","end2":"#57bcff","end3":"#81d4a7","gray":"#95
 
 /***/ }),
 
+/***/ "./resources/sass/answers/supportStatus.scss":
+/*!***************************************************!*\
+  !*** ./resources/sass/answers/supportStatus.scss ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"end1":"#ec4e4e","end2":"#57bcff","end3":"#81d4a7","gray":"#9597a6","bluegray":"#dadbe6","white":"#fff","black":"#000","dark":"#212529"};
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -50032,31 +50044,32 @@ module.exports = {"end1":"#ec4e4e","end2":"#57bcff","end3":"#81d4a7","gray":"#95
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/question/confirm.scss ./resources/sass/question/send.scss ./resources/sass/staff/login.scss ./resources/sass/staff/logout.scss ./resources/sass/staff/email.scss ./resources/sass/staff/end.scss ./resources/sass/staff/reset.scss ./resources/sass/staff/change.scss ./resources/sass/app.scss ./resources/sass/answers/confirmation.scss ./resources/sass/answers/stateChangeButton.scss ./resources/sass/answers/pagingButton.scss ./resources/sass/answers/button.scss ./resources/sass/answers/listItem.scss ./resources/sass/answers/endIcon.scss ./resources/sass/answers/questionList.scss ./resources/sass/answers/questionView.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/question/index.scss ./resources/sass/question/confirm.scss ./resources/sass/question/send.scss ./resources/sass/staff/login.scss ./resources/sass/staff/logout.scss ./resources/sass/staff/email.scss ./resources/sass/staff/end.scss ./resources/sass/staff/reset.scss ./resources/sass/staff/change.scss ./resources/sass/app.scss ./resources/sass/answers/confirmation.scss ./resources/sass/answers/stateChangeButton.scss ./resources/sass/answers/pagingButton.scss ./resources/sass/answers/button.scss ./resources/sass/answers/listItem.scss ./resources/sass/answers/endIcon.scss ./resources/sass/answers/questionList.scss ./resources/sass/answers/supportStatus.scss ./resources/sass/answers/questionView.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /var/www/resources/sass/question/index.scss */"./resources/sass/question/index.scss");
-__webpack_require__(/*! /var/www/resources/sass/question/confirm.scss */"./resources/sass/question/confirm.scss");
-__webpack_require__(/*! /var/www/resources/sass/question/send.scss */"./resources/sass/question/send.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/login.scss */"./resources/sass/staff/login.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/logout.scss */"./resources/sass/staff/logout.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/email.scss */"./resources/sass/staff/email.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/end.scss */"./resources/sass/staff/end.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/reset.scss */"./resources/sass/staff/reset.scss");
-__webpack_require__(/*! /var/www/resources/sass/staff/change.scss */"./resources/sass/staff/change.scss");
-__webpack_require__(/*! /var/www/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/confirmation.scss */"./resources/sass/answers/confirmation.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/stateChangeButton.scss */"./resources/sass/answers/stateChangeButton.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/pagingButton.scss */"./resources/sass/answers/pagingButton.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/button.scss */"./resources/sass/answers/button.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/listItem.scss */"./resources/sass/answers/listItem.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/endIcon.scss */"./resources/sass/answers/endIcon.scss");
-__webpack_require__(/*! /var/www/resources/sass/answers/questionList.scss */"./resources/sass/answers/questionList.scss");
-module.exports = __webpack_require__(/*! /var/www/resources/sass/answers/questionView.scss */"./resources/sass/answers/questionView.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/index.scss */"./resources/sass/question/index.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/confirm.scss */"./resources/sass/question/confirm.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/question/send.scss */"./resources/sass/question/send.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/login.scss */"./resources/sass/staff/login.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/logout.scss */"./resources/sass/staff/logout.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/email.scss */"./resources/sass/staff/email.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/end.scss */"./resources/sass/staff/end.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/reset.scss */"./resources/sass/staff/reset.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/staff/change.scss */"./resources/sass/staff/change.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/confirmation.scss */"./resources/sass/answers/confirmation.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/stateChangeButton.scss */"./resources/sass/answers/stateChangeButton.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/pagingButton.scss */"./resources/sass/answers/pagingButton.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/button.scss */"./resources/sass/answers/button.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/listItem.scss */"./resources/sass/answers/listItem.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/endIcon.scss */"./resources/sass/answers/endIcon.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/questionList.scss */"./resources/sass/answers/questionList.scss");
+__webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/supportStatus.scss */"./resources/sass/answers/supportStatus.scss");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/sass/answers/questionView.scss */"./resources/sass/answers/questionView.scss");
 
 
 /***/ })

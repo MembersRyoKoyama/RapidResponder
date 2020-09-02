@@ -22,7 +22,7 @@
         <div>{{Str::substr($question->content,0,100)}}</div>
         <div>
             @foreach($question->tags as $tag)
-            <span>{{$tag->name}}</span>
+            <span class="tag">{{$tag->name}}</span>
             @endforeach
         </div>
     </td>

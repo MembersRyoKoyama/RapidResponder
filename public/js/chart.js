@@ -88,7 +88,7 @@
 
 /***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/_variables.scss":
 /*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--24-2!./node_modules/sass-loader/dist/cjs.js??ref--24-3!./resources/sass/_variables.scss ***!
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--25-2!./node_modules/sass-loader/dist/cjs.js??ref--25-3!./resources/sass/_variables.scss ***!
   \*****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -736,6 +736,9 @@ $(document).ready(function () {
       }]
     },
     options: {
+      legend: {
+        display: false
+      },
       title: {
         display: false,
         text: "対応状況"
@@ -761,6 +764,9 @@ $(document).ready(function () {
       }]
     },
     options: {
+      legend: {
+        display: false
+      },
       title: {
         display: false,
         text: "月別対応状況"
@@ -771,7 +777,10 @@ $(document).ready(function () {
         }],
         yAxes: [{
           display: true,
-          labelString: "月",
+          scaleLabel: {
+            display: true,
+            labelString: "質問件数"
+          },
           stacked: true,
           ticks: {
             stepSize: 25,
@@ -795,7 +804,7 @@ $(document).ready(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/src??ref--24-2!../../node_modules/sass-loader/dist/cjs.js??ref--24-3!./_variables.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/_variables.scss");
+var content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/postcss-loader/src??ref--25-2!../../node_modules/sass-loader/dist/cjs.js??ref--25-3!./_variables.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./resources/sass/_variables.scss");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -824,7 +833,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/resources/js/chart.js */"./resources/js/chart.js");
+module.exports = __webpack_require__(/*! /var/www/Rapid-Responder/resources/js/chart.js */"./resources/js/chart.js");
 
 
 /***/ })

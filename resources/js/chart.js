@@ -20,6 +20,9 @@ $(document).ready(function() {
             ]
         },
         options: {
+            legend: {
+                display: false
+            },
             title: {
                 display: false,
                 text: "対応状況"
@@ -49,6 +52,9 @@ $(document).ready(function() {
             ]
         },
         options: {
+            legend: {
+                display: false
+            },
             title: {
                 display: false,
                 text: "月別対応状況"
@@ -62,7 +68,11 @@ $(document).ready(function() {
                 yAxes: [
                     {
                         display: true,
-                        labelString: "月",
+                        scaleLabel: {
+                            display: true,
+                            labelString: "質問件数"
+                        },
+
                         stacked: true,
                         ticks: {
                             stepSize: 25,

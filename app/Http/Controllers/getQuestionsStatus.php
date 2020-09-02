@@ -60,6 +60,10 @@ class getQuestionsStatus extends Controller
             'labels' => $labels,
             'datas' => $datas,
         ];
-        return view('answers.supportStatus', ['pie' => $pieData, 'bar' => $barData]);
+        $data = [
+            'all' => $all,
+            'end' => $end,
+        ];
+        return view('answers.supportStatus', ['data' => $data, 'pie' => $pieData, 'bar' => $barData]);
     }
 }
