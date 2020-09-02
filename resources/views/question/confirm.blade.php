@@ -23,14 +23,14 @@
         <input type="text" value="{{$products}}" readonly><br>
 
 
-        <select name="tags[]" size={{count($tags)}} multiple hidden>
+        <select name="tags[]" size={{count($tags)}} data-selected="{{ old('tags') }}" multiple hidden>
             @foreach($tags as $tag)
             <option value="{{$tag->id}}" selected>{{$tag->name}}</option>
             @endforeach
         </select>
 
         <label>状態タグ</label><br>
-        <input type="text" value="{{$tagvalue}}" readonly><br>
+        <textarea cols="40" rows="6" class="tag-scr" readonly> {{$tagvalue}}</textarea><br>
         <label>お問い合わせ内容</label><br>
         <textarea name=" content" cols="50" rows="5" readonly>{{$inputs['content']}}</textarea>
 
