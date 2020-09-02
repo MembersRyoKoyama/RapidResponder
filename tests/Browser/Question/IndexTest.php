@@ -9,6 +9,7 @@ use App\Question;
 use App\Product;
 use Laravel\Dusk\Chrome;
 use Illuminate\Support\Facades\Artisan;
+use Facebook\WebDriver\WebDriverBy;
 
 class IndexTest extends DuskTestCase
 {
@@ -48,15 +49,24 @@ class IndexTest extends DuskTestCase
                 ->type('content', $question->content)
                 //タグ
                 ->click('.js-modal-open')
-                ->check('#step1_0')
-                ->assertChecked('#step1_0')
+                ->pause(500)
+                ->driver
+                ->findElement(WebDriverBy::xpath('//*[@id="app"]/main/div/form/div[2]/div[2]/label[1]'))
+                ->click();
+            $browser->assertChecked('#step1_0')
                 ->clickLink('閉じる')
                 ->press('confirm-btn')
                 ->assertPathIs('/question/confirm');
 
-            $browser->screenshot('filename_1');
+            //$browser->screenshot('filename_1');
         });
     }
+    /**
+     * A Dusk test example.
+     *
+     * @return void
+     * @group index
+     */
     public function testNonBrowseIndex()
     {
         $question = factory(Question::class)->create([
@@ -70,6 +80,12 @@ class IndexTest extends DuskTestCase
                 ->assertPathIs('/question');
         });
     }
+    /**
+     * A Dusk test example.
+     *
+     * @return void
+     * @group index
+     */
     public function testErrBrowseIndex()
     {
         $question = factory(Question::class)->create([
