@@ -37,7 +37,7 @@
         <th class="col-3">お問い合わせ内容</th>
         <td class="col-9">
           @foreach($tags as $tag)
-          {{$tag->name}}
+          <span class="tag">{{$tag->name}}</span>
           @endforeach
         </td>
       </tr>

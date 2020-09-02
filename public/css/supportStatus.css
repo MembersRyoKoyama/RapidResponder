@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+h1 {
+  color: #9597a6;
+  font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF   Medium", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30E1\30A4\30EA\30AA", sans-serif;
+}
+
+h3 {
+  font-size: larger;
+}
+
+.supportStatus {
+  background: #fff;
+  margin-top: -1.5rem;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.supportStatus .legend {
+  display: inline-block;
+  border-bottom: 1px solid #dadbe6;
+  padding: 10px;
+  margin: 30px 0px 60px 0px;
+}
+
+.supportStatus .legend .end {
+  margin-left: 10px;
+}
+
+.supportStatus .legend .end .endIcon {
+  font-size: small;
+}
+
+.supportStatus .noBorder {
+  border: none;
+}
+

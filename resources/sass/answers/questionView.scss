@@ -5,7 +5,13 @@ h1 {
     font-family: "Yu Gothic", "游ゴシック Medium", YuGothic, "游ゴシック体",
         "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
-
+.tag {
+    display: inline-block;
+    color: $white;
+    background-color: $button-detail;
+    border-radius: 10px;
+    padding: 0 3px;
+}
 #questionViewTable {
     background: $white;
     margin-top: -1.5rem;

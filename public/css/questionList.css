@@ -25,16 +25,29 @@
           user-select: none;
 }
 
+.questionList .button-outline-big {
+  font-size: larger;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 2px 1px 1px #dadbe6;
+}
+
 .questionList .button-outline-big:hover {
   color: #fff;
 }
 
 .questionList .button-dark {
   color: #fff;
+  font-size: larger;
 }
 
 .questionList .button-dark:hover {
   color: #fff;
+}
+
+.questionList .dropdown {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .questionList .questionListTable thead th {
@@ -82,5 +95,13 @@
   justify-content: left;
   align-items: baseline;
   font-size: 0.7rem;
+}
+
+.questionList .questionListTable tbody td .tag {
+  display: inline-block;
+  color: #fff;
+  background-color: #8c92b9;
+  border-radius: 10px;
+  padding: 0 3px;
 }
 

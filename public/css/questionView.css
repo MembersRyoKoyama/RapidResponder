@@ -5,6 +5,14 @@ h1 {
   font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF   Medium", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53", "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "\30E1\30A4\30EA\30AA", sans-serif;
 }
 
+.tag {
+  display: inline-block;
+  color: #fff;
+  background-color: #8c92b9;
+  border-radius: 10px;
+  padding: 0 3px;
+}
+
 #questionViewTable {
   background: #fff;
   margin-top: -1.5rem;

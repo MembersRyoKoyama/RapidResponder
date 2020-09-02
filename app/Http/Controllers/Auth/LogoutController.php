@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LogoutController extends Controller
 {
@@ -18,7 +19,6 @@ class LogoutController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
     /**
      * Create a new controller instance.
      *

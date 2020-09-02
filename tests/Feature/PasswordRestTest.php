@@ -17,7 +17,7 @@ class PasswordRestTest extends TestCase
     /**
      * A basic feature test example.
      *
-     * @test
+     * 
      * @return void
      * @group passreset
      */

@@ -134,7 +134,7 @@ class PageTransitionTest extends DuskTestCase
             $browser->loginAs($user)
                 ->visit('/questionList')
                 ->clickLink("対応状況")
-                ->assertSee('/supportStatus');
+                ->assertPathIs('/supportStatus');
         });
     }
 }
