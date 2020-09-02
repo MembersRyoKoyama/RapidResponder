@@ -49,10 +49,10 @@ class supportStatusTest extends DuskTestCase
     /**
      * @group supportStatus
      * A Dusk test example.
-     *
+     * 
      * @return void
      */
-    public function testExample()
+    public function supportStatusGraph()
     {
         $user = factory(User::class)->create();
         $this->browse(function (Browser $browser) use ($user) {

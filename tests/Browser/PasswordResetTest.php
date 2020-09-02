@@ -37,7 +37,7 @@ class PasswordResetTest extends DuskTestCase
      * @return void
      * @group resetEnd
      */
-    public function testResetMail()
+    public function resetMail()
     {
         Notification::fake();
         $user = factory(User::class)->create();

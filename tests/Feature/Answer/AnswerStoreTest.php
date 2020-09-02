@@ -42,7 +42,7 @@ class AnswerStoreTest extends TestCase
             'staffs_id' => $user1->id,
             'end' => 2,
         ]);
-        eval(\Psy\sh());
+        //eval(\Psy\sh());
         $answer = factory(Answer::class)->make([
             "comment" => "comment",
             "message" => "message",

@@ -91,7 +91,7 @@ class AnswerFormTest extends TestCase
 
         $user1 = factory(User::class)->create();
         $user2 = factory(User::class)->create();
-        eval(\Psy\sh());
+        //eval(\Psy\sh());
         $question = factory(Question::class)->create([
             'staffs_id' => $user1->id,
             'end' => 2,
